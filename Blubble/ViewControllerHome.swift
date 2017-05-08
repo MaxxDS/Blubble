@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
 class ViewControllerHome: UIViewController {
 
-    @IBOutlet var buttonClassement: UIButton!
-    
-    @IBOutlet var buttonRating: UIButton!
+
+    @IBOutlet var instructionsLabel: UILabel!
     
     @IBOutlet var buttonPlay: UIButton!
     
@@ -24,6 +25,13 @@ class ViewControllerHome: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let testObject = PFObject(className: "TestObject")
+//        testObject["foo"] = "bar"
+//        testObject.saveInBackground { (Bool, Error) in
+//            print("Object has been saved.")
+//        }
+        
         initUI()
         initData()
 
@@ -36,20 +44,11 @@ class ViewControllerHome: UIViewController {
     }
     
     func initData (){
+        instructionsLabel.text = instructions
     }
     
     func initUI(){
-        
-        buttonClassement.backgroundColor = .clear
-        buttonClassement.layer.cornerRadius = 5
-        buttonClassement.layer.borderWidth = 1
-        buttonClassement.layer.borderColor = UIColor.myGreenColor().cgColor
-        
-        buttonRating.backgroundColor = .clear
-        buttonRating.layer.cornerRadius = 5
-        buttonRating.layer.borderWidth = 1
-        buttonRating.layer.borderColor = UIColor.myGreenColor().cgColor
-        
+
         
         buttonPlay.backgroundColor = .clear
 //        buttonPlay.layer.cornerRadius = 5
@@ -70,8 +69,9 @@ class ViewControllerHome: UIViewController {
     
 
     
+    var instructions : String =
+    "Appuyer alternativememt sur le bouton gauche et le bouton droit pour faire grossir la bulle !!"
     
-
     /*
     // MARK: - Navigation
 

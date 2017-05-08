@@ -7,28 +7,35 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
 class ViewControllerPlayGround: UIViewController {
     
-    @IBOutlet var countDownLabel: UILabel!
     
-    @IBOutlet var gameOverLabel: UILabel!
+    
+    @IBOutlet var countDownLabel: UILabel!
     
     @IBOutlet var scoreLabel: UILabel!
     
+    @IBOutlet var imageBulle: UIImageView!
+
+    
+    @IBOutlet var Label: UILabel!
+
     var score : Int = 0
     
     var count = 10
     
     var timer : Timer? = nil
     
-    @IBOutlet var BlubblePicture: UIImageView!
+
     
     @IBOutlet var buttonLeft: UIButton!
     
     @IBAction func buttonLeftPressed(_ sender: Any) {
         if buttonLeft.backgroundColor == UIColor.myGreenColor() {
-            buttonLeft.backgroundColor = UIColor.gray
+            buttonLeft.backgroundColor = UIColor.white
             buttonRight.backgroundColor = UIColor.myGreenColor()
             
         }
@@ -38,15 +45,17 @@ class ViewControllerPlayGround: UIViewController {
     @IBOutlet var buttonRight: UIButton!
     
     @IBAction func buttonRightPressed(_ sender: Any) {
-        if (buttonLeft.backgroundColor == UIColor.gray) {
-            buttonRight.backgroundColor = UIColor.gray
+        if (buttonLeft.backgroundColor == UIColor.white) {
+            buttonRight.backgroundColor = UIColor.white
             buttonLeft.backgroundColor = UIColor.myGreenColor()
-            BlubblePicture.frame.size.width = BlubblePicture.frame.size.width * 1.20
-            BlubblePicture.frame.size.height = BlubblePicture.frame.size.height * 1.20
-            BlubblePicture.center.x = self.view.center.x
-            BlubblePicture.center.y = self.view.center.y
             score += 1
+            imageBulle.frame.size.width = imageBulle.frame.size.width * 1.20
+            imageBulle.frame.size.height = imageBulle.frame.size.height * 1.20
+            imageBulle.center.x = self.view.center.x
+            imageBulle.center.y = self.view.center.y
             scoreLabel.text = ("\(score)")
+
+
         }
     }
     
@@ -89,10 +98,10 @@ class ViewControllerPlayGround: UIViewController {
     
     
     func initData() {
-scoreLabel.text = ("\(score)")
-        gameOverLabel.isHidden = true
-        BlubblePicture.frame.size.width = 30
-        BlubblePicture.frame.size.height = 30
+
+        scoreLabel.text = ("\(score)")
+     
+
     }
     
     
@@ -114,12 +123,12 @@ scoreLabel.text = ("\(score)")
         timer?.invalidate()
         timer = nil
         countDownLabel.isHidden = true
-        gameOverLabel.isHidden = false
+
         buttonLeft.isEnabled = false
         buttonRight.isEnabled = false
         
     }
-    
+
     
     /*
      // MARK: - Navigation
