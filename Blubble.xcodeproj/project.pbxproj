@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		F0E7F1A81EBC710500466B9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1A71EBC710500466B9B /* AppDelegate.swift */; };
-		F0E7F1AA1EBC710500466B9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1A91EBC710500466B9B /* ViewController.swift */; };
 		F0E7F1AD1EBC710500466B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E7F1AB1EBC710500466B9B /* Main.storyboard */; };
 		F0E7F1AF1EBC710500466B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E7F1AE1EBC710500466B9B /* Assets.xcassets */; };
 		F0E7F1B21EBC710500466B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E7F1B01EBC710500466B9B /* LaunchScreen.storyboard */; };
 		F0E7F1BD1EBC710500466B9B /* BlubbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1BC1EBC710500466B9B /* BlubbleTests.swift */; };
 		F0E7F1C81EBC710500466B9B /* BlubbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1C71EBC710500466B9B /* BlubbleUITests.swift */; };
+		F0E7F1DC1EBC733B00466B9B /* ViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1DB1EBC733B00466B9B /* ViewControllerHome.swift */; };
+		F0E7F1DE1EBC781800466B9B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1DD1EBC781800466B9B /* Extension.swift */; };
+		F0E7F1E01EBC91F400466B9B /* ViewControllerPlayGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1DF1EBC91F400466B9B /* ViewControllerPlayGround.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		F0E7F1A41EBC710500466B9B /* Blubble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blubble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E7F1A71EBC710500466B9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F0E7F1A91EBC710500466B9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F0E7F1AC1EBC710500466B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0E7F1AE1EBC710500466B9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0E7F1B11EBC710500466B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		F0E7F1C31EBC710500466B9B /* BlubbleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlubbleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E7F1C71EBC710500466B9B /* BlubbleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlubbleUITests.swift; sourceTree = "<group>"; };
 		F0E7F1C91EBC710500466B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0E7F1DB1EBC733B00466B9B /* ViewControllerHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerHome.swift; sourceTree = "<group>"; };
+		F0E7F1DD1EBC781800466B9B /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		F0E7F1DF1EBC91F400466B9B /* ViewControllerPlayGround.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPlayGround.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +101,13 @@
 		F0E7F1A61EBC710500466B9B /* Blubble */ = {
 			isa = PBXGroup;
 			children = (
-				F0E7F1A71EBC710500466B9B /* AppDelegate.swift */,
-				F0E7F1A91EBC710500466B9B /* ViewController.swift */,
 				F0E7F1AB1EBC710500466B9B /* Main.storyboard */,
+				F0E7F1A71EBC710500466B9B /* AppDelegate.swift */,
+				F0E7F1D51EBC721B00466B9B /* Controllers */,
+				F0E7F1D61EBC723F00466B9B /* Views */,
+				F0E7F1D81EBC725C00466B9B /* Modals */,
+				F0E7F1D91EBC727000466B9B /* Library */,
+				F0E7F1DA1EBC727E00466B9B /* Extensions */,
 				F0E7F1AE1EBC710500466B9B /* Assets.xcassets */,
 				F0E7F1B01EBC710500466B9B /* LaunchScreen.storyboard */,
 				F0E7F1B31EBC710500466B9B /* Info.plist */,
@@ -123,6 +131,44 @@
 				F0E7F1C91EBC710500466B9B /* Info.plist */,
 			);
 			path = BlubbleUITests;
+			sourceTree = "<group>";
+		};
+		F0E7F1D51EBC721B00466B9B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F0E7F1DB1EBC733B00466B9B /* ViewControllerHome.swift */,
+				F0E7F1DF1EBC91F400466B9B /* ViewControllerPlayGround.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F0E7F1D61EBC723F00466B9B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F0E7F1D81EBC725C00466B9B /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Modals;
+			sourceTree = "<group>";
+		};
+		F0E7F1D91EBC727000466B9B /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		F0E7F1DA1EBC727E00466B9B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F0E7F1DD1EBC781800466B9B /* Extension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +308,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0E7F1AA1EBC710500466B9B /* ViewController.swift in Sources */,
+				F0E7F1DE1EBC781800466B9B /* Extension.swift in Sources */,
+				F0E7F1E01EBC91F400466B9B /* ViewControllerPlayGround.swift in Sources */,
 				F0E7F1A81EBC710500466B9B /* AppDelegate.swift in Sources */,
+				F0E7F1DC1EBC733B00466B9B /* ViewControllerHome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
