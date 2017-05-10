@@ -26,7 +26,7 @@ class ViewControllerHome: UIViewController {
     @IBOutlet var rateButton: UIButton!
     
     @IBAction func rateButtonPressed(_ sender: Any) {
-        rateApp(appId: "id959379869") { success in
+        rateApp(appId: "id1234984538") { success in
             print("RateApp \(success)")
         }
         
