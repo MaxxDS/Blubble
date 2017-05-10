@@ -51,8 +51,8 @@ class ViewControllerPlayGround: UIViewController {
             buttonRight.backgroundColor = UIColor.white
             buttonLeft.backgroundColor = UIColor.myGreenColor()
             score += 1
-            imageBulle.frame.size.width = imageBulle.frame.size.width * 1.05
-            imageBulle.frame.size.height = imageBulle.frame.size.height * 1.05
+            imageBulle.frame.size.width = imageBulle.frame.size.width * 1.015
+            imageBulle.frame.size.height = imageBulle.frame.size.height * 1.015
             imageBulle.center.x = self.view.center.x
             imageBulle.center.y = self.view.center.y
             scoreLabel.text = ("\(score)")
@@ -111,7 +111,7 @@ class ViewControllerPlayGround: UIViewController {
     
     
     func initData() {
-        count = 5
+        count = 20
         score = 0
         scoreLabel.text = ("\(score)")
         replayButton.isHidden = true
