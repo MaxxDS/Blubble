@@ -25,3 +25,8 @@ extension UIColor
     }
 }
 
+class yourclass: UIViewController, UITabBarDelegate {
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        //This method will be called when user changes tab.
+    }
+}

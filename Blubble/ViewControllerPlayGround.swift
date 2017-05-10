@@ -19,17 +19,19 @@ class ViewControllerPlayGround: UIViewController {
     @IBOutlet var scoreLabel: UILabel!
     
     @IBOutlet var imageBulle: UIImageView!
-
+    
+    
+    @IBOutlet var replayButton: UIButton!
     
     @IBOutlet var Label: UILabel!
-
+    
     var score : Int = 0
     
-    var count = 10
+    var count = 0
     
     var timer : Timer? = nil
     
-
+    
     
     @IBOutlet var buttonLeft: UIButton!
     
@@ -49,16 +51,26 @@ class ViewControllerPlayGround: UIViewController {
             buttonRight.backgroundColor = UIColor.white
             buttonLeft.backgroundColor = UIColor.myGreenColor()
             score += 1
-            imageBulle.frame.size.width = imageBulle.frame.size.width * 1.20
-            imageBulle.frame.size.height = imageBulle.frame.size.height * 1.20
+            imageBulle.frame.size.width = imageBulle.frame.size.width * 1.05
+            imageBulle.frame.size.height = imageBulle.frame.size.height * 1.05
             imageBulle.center.x = self.view.center.x
             imageBulle.center.y = self.view.center.y
             scoreLabel.text = ("\(score)")
-
-
+            
+            
         }
     }
     
+    
+    @IBAction func replayButtonPressed(_ sender: Any) {
+        
+        initData()
+        initUI()
+        restartGame()
+        
+        countDownLabel.text = "\(count)"
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewControllerPlayGround.update), userInfo: nil, repeats: true)
+    }
     
     
     override func viewDidLoad() {
@@ -69,7 +81,7 @@ class ViewControllerPlayGround: UIViewController {
         countDownLabel.text = "\(count)"
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewControllerPlayGround.update), userInfo: nil, repeats: true)
-
+        
     }
     
     // Do any additional setup after loading the view.
@@ -93,15 +105,17 @@ class ViewControllerPlayGround: UIViewController {
         buttonRight.layer.borderColor = UIColor.white.cgColor
         buttonRight.backgroundColor = UIColor.myGreenColor()
         
-        
+        imageBulle.center.x = self.view.center.x
+        imageBulle.center.y = self.view.center.y
     }
     
     
     func initData() {
-
+        count = 5
+        score = 0
         scoreLabel.text = ("\(score)")
-     
-
+        replayButton.isHidden = true
+        
     }
     
     
@@ -123,12 +137,23 @@ class ViewControllerPlayGround: UIViewController {
         timer?.invalidate()
         timer = nil
         countDownLabel.isHidden = true
-
+        replayButton.isHidden = false
         buttonLeft.isEnabled = false
         buttonRight.isEnabled = false
         
     }
-
+    
+    func restartGame () {
+        timer = nil
+        countDownLabel.isHidden = false
+        replayButton.isHidden = true
+        buttonLeft.isEnabled = true
+        buttonRight.isEnabled = true
+        imageBulle.frame.size.width = 48
+        imageBulle.frame.size.height = 48
+        imageBulle.center.x = self.view.center.x
+        imageBulle.center.y = self.view.center.y
+    }
     
     /*
      // MARK: - Navigation

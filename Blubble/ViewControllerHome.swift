@@ -10,6 +10,7 @@ import UIKit
 import Parse
 import Bolts
 
+
 class ViewControllerHome: UIViewController {
 
 
@@ -22,7 +23,14 @@ class ViewControllerHome: UIViewController {
         
     }
     
+    @IBOutlet var rateButton: UIButton!
     
+    @IBAction func rateButtonPressed(_ sender: Any) {
+        rateApp(appId: "id959379869") { success in
+            print("RateApp \(success)")
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,17 +52,24 @@ class ViewControllerHome: UIViewController {
     }
     
     func initData (){
-        instructionsLabel.text = instructions
+//        instructionsLabel.text = instructions
     }
     
     func initUI(){
 
         
         buttonPlay.backgroundColor = .clear
-//        buttonPlay.layer.cornerRadius = 5
-//        buttonPlay.layer.borderWidth = 1
-//        buttonPlay.layer.borderColor = UIColor.myBlueColor().cgColor
+        
+        instructionsLabel.layer.masksToBounds = true
+        instructionsLabel.layer.backgroundColor  = UIColor.white.cgColor
+        instructionsLabel.layer.cornerRadius = 5
+        instructionsLabel.layer.borderWidth = 0
+        instructionsLabel.layer.borderColor = UIColor.white.cgColor
 
+        rateButton.layer.cornerRadius = 5
+       rateButton.layer.borderWidth = 1
+       rateButton.layer.borderColor = UIColor.white.cgColor
+        
         
         self.navigationController?.navigationBar.titleTextAttributes =
             [NSForegroundColorAttributeName: UIColor.white,
@@ -68,10 +83,22 @@ class ViewControllerHome: UIViewController {
     }
     
 
+//    
+//    var instructions : String =
+//    "Instructions: Appuyer alternativememt sur le bouton gauche et le bouton droit pour faire grossir la bulle !!"
     
-    var instructions : String =
-    "Appuyer alternativememt sur le bouton gauche et le bouton droit pour faire grossir la bulle !!"
-    
+    func rateApp(appId: String, completion: @escaping ((_ success: Bool)->())) {
+        guard let url = URL(string : "itms-apps://itunes.apple.com/app/" + appId) else {
+            completion(false)
+            return
+        }
+        guard #available(iOS 10, *) else {
+            completion(UIApplication.shared.openURL(url))
+            return
+        }
+        UIApplication.shared.open(url, options: [:], completionHandler: completion)
+    }
+
     /*
     // MARK: - Navigation
 
