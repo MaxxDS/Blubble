@@ -9,9 +9,20 @@
 import UIKit
 import Parse
 import Bolts
+import GameKit
 
-class ViewControllerPlayGround: UIViewController {
+class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
+{
     
+    
+    @IBOutlet var showLeaderButton: UIButton!
+    
+    @IBAction func showLeaderButtonPressed(_ sender: Any) {
+        showLeader()
+        
+    }
+    
+    //shows leaderboard screen
     
     
     @IBOutlet var countDownLabel: UILabel!
@@ -79,9 +90,13 @@ class ViewControllerPlayGround: UIViewController {
         initUI()
         
         countDownLabel.text = "\(count)"
-        
+       
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewControllerPlayGround.update), userInfo: nil, repeats: true)
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+         authenticateLocalPlayer()
     }
     
     // Do any additional setup after loading the view.
@@ -140,6 +155,7 @@ class ViewControllerPlayGround: UIViewController {
         replayButton.isHidden = false
         buttonLeft.isEnabled = false
         buttonRight.isEnabled = false
+        saveHighscore(score: score)
         
     }
     
@@ -155,6 +171,63 @@ class ViewControllerPlayGround: UIViewController {
         imageBulle.center.y = self.view.center.y
     }
     
+    
+    //initiate gamecenter
+    func authenticateLocalPlayer(){
+        
+        var localPlayer = GKLocalPlayer.localPlayer()
+        
+        localPlayer.authenticateHandler = {(viewController, error) -> Void in
+            
+            if (viewController != nil) {
+                self.present(viewController!, animated: true, completion: nil)
+            }
+                
+            else {
+                print((GKLocalPlayer.localPlayer().isAuthenticated))
+            }
+        }
+        
+    }
+    
+    
+    //shows leaderboard screen
+    func showLeader() {
+        var vc = self.view?.window?.rootViewController
+        var gc = GKGameCenterViewController()
+        gc.gameCenterDelegate = self
+        self.present(gc, animated: true, completion: nil)
+    }
+    
+    //hides leaderboard screen
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController)
+    {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    //send high score to leaderboard
+    func saveHighscore(score:Int) {
+        
+        //check if user is signed in
+        if GKLocalPlayer.localPlayer().isAuthenticated {
+            
+            var scoreReporter = GKScore(leaderboardIdentifier: "LesPlusGrossesBlubbles") //leaderboard id here
+            
+            scoreReporter.value = Int64(score) //score variable here (same as above)
+            
+            var scoreArray: [GKScore] = [scoreReporter]
+            
+            GKScore.report(scoreArray, withCompletionHandler: { (error) in
+                if error != nil {
+                    print("error")
+                }
+            })
+            
+            
+            
+        }
+    }
     /*
      // MARK: - Navigation
      

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F06922FA1EC0C4DA003B8C8B /* ViewControllerHighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06922F91EC0C4DA003B8C8B /* ViewControllerHighScore.swift */; };
-		F06922FC1EC0CBF6003B8C8B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06922FB1EC0CBF6003B8C8B /* Constants.swift */; };
 		F06923001EC0CFE9003B8C8B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06922FE1EC0CFE9003B8C8B /* Bolts.framework */; };
 		F06923011EC0CFE9003B8C8B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06922FF1EC0CFE9003B8C8B /* Parse.framework */; };
 		F06923031EC0D03C003B8C8B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06923021EC0D03C003B8C8B /* AudioToolbox.framework */; };
@@ -21,7 +19,6 @@
 		F06923111EC0D0C2003B8C8B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06923101EC0D0C2003B8C8B /* SystemConfiguration.framework */; };
 		F06923131EC0D0D7003B8C8B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F06923121EC0D0D7003B8C8B /* libz.tbd */; };
 		F06923151EC0D0EC003B8C8B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F06923141EC0D0EC003B8C8B /* libsqlite3.tbd */; };
-		F0B2F2A71EC31DD900A317C3 /* TableViewControllerHighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B2F2A61EC31DD900A317C3 /* TableViewControllerHighScore.swift */; };
 		F0E7F1A81EBC710500466B9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1A71EBC710500466B9B /* AppDelegate.swift */; };
 		F0E7F1AD1EBC710500466B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E7F1AB1EBC710500466B9B /* Main.storyboard */; };
 		F0E7F1AF1EBC710500466B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E7F1AE1EBC710500466B9B /* Assets.xcassets */; };
@@ -31,6 +28,7 @@
 		F0E7F1DC1EBC733B00466B9B /* ViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1DB1EBC733B00466B9B /* ViewControllerHome.swift */; };
 		F0E7F1DE1EBC781800466B9B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1DD1EBC781800466B9B /* Extension.swift */; };
 		F0E7F1E01EBC91F400466B9B /* ViewControllerPlayGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1DF1EBC91F400466B9B /* ViewControllerPlayGround.swift */; };
+		F0F8E0311EC3A4EA00B209D2 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F8E0301EC3A4EA00B209D2 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +49,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F06922F91EC0C4DA003B8C8B /* ViewControllerHighScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerHighScore.swift; sourceTree = "<group>"; };
-		F06922FB1EC0CBF6003B8C8B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F06922FE1EC0CFE9003B8C8B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		F06922FF1EC0CFE9003B8C8B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		F06923021EC0D03C003B8C8B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -65,7 +61,6 @@
 		F06923101EC0D0C2003B8C8B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F06923121EC0D0D7003B8C8B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F06923141EC0D0EC003B8C8B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		F0B2F2A61EC31DD900A317C3 /* TableViewControllerHighScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerHighScore.swift; sourceTree = "<group>"; };
 		F0E7F1A41EBC710500466B9B /* Blubble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blubble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E7F1A71EBC710500466B9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0E7F1AC1EBC710500466B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,6 +76,8 @@
 		F0E7F1DB1EBC733B00466B9B /* ViewControllerHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerHome.swift; sourceTree = "<group>"; };
 		F0E7F1DD1EBC781800466B9B /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		F0E7F1DF1EBC91F400466B9B /* ViewControllerPlayGround.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPlayGround.swift; sourceTree = "<group>"; };
+		F0F8E02F1EC3A4E100B209D2 /* Blubble.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blubble.entitlements; sourceTree = "<group>"; };
+		F0F8E0301EC3A4EA00B209D2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +89,7 @@
 				F06923131EC0D0D7003B8C8B /* libz.tbd in Frameworks */,
 				F06923111EC0D0C2003B8C8B /* SystemConfiguration.framework in Frameworks */,
 				F069230F1EC0D0B2003B8C8B /* StoreKit.framework in Frameworks */,
+				F0F8E0311EC3A4EA00B209D2 /* GameKit.framework in Frameworks */,
 				F069230D1EC0D0A3003B8C8B /* Security.framework in Frameworks */,
 				F069230B1EC0D091003B8C8B /* QuartzCore.framework in Frameworks */,
 				F06923091EC0D077003B8C8B /* CoreLocation.framework in Frameworks */,
@@ -123,6 +121,7 @@
 		F06922FD1EC0CFA7003B8C8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F0F8E0301EC3A4EA00B209D2 /* GameKit.framework */,
 				F06923141EC0D0EC003B8C8B /* libsqlite3.tbd */,
 				F06923121EC0D0D7003B8C8B /* libz.tbd */,
 				F06923101EC0D0C2003B8C8B /* SystemConfiguration.framework */,
@@ -163,6 +162,7 @@
 		F0E7F1A61EBC710500466B9B /* Blubble */ = {
 			isa = PBXGroup;
 			children = (
+				F0F8E02F1EC3A4E100B209D2 /* Blubble.entitlements */,
 				F0E7F1AB1EBC710500466B9B /* Main.storyboard */,
 				F0E7F1A71EBC710500466B9B /* AppDelegate.swift */,
 				F0E7F1D51EBC721B00466B9B /* Controllers */,
@@ -200,8 +200,6 @@
 			children = (
 				F0E7F1DB1EBC733B00466B9B /* ViewControllerHome.swift */,
 				F0E7F1DF1EBC91F400466B9B /* ViewControllerPlayGround.swift */,
-				F06922F91EC0C4DA003B8C8B /* ViewControllerHighScore.swift */,
-				F0B2F2A61EC31DD900A317C3 /* TableViewControllerHighScore.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -216,7 +214,6 @@
 		F0E7F1D81EBC725C00466B9B /* Modals */ = {
 			isa = PBXGroup;
 			children = (
-				F06922FB1EC0CBF6003B8C8B /* Constants.swift */,
 			);
 			name = Modals;
 			sourceTree = "<group>";
@@ -308,6 +305,9 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 0;
 							};
 						};
@@ -381,10 +381,7 @@
 				F0E7F1DE1EBC781800466B9B /* Extension.swift in Sources */,
 				F0E7F1E01EBC91F400466B9B /* ViewControllerPlayGround.swift in Sources */,
 				F0E7F1A81EBC710500466B9B /* AppDelegate.swift in Sources */,
-				F06922FA1EC0C4DA003B8C8B /* ViewControllerHighScore.swift in Sources */,
-				F0B2F2A71EC31DD900A317C3 /* TableViewControllerHighScore.swift in Sources */,
 				F0E7F1DC1EBC733B00466B9B /* ViewControllerHome.swift in Sources */,
-				F06922FC1EC0CBF6003B8C8B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +545,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MaxxDS.Blubble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -565,6 +563,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MaxxDS.Blubble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

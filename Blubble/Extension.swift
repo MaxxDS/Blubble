@@ -24,9 +24,3 @@ extension UIColor
         return UIColor(red: 0.400, green: 1.000, blue: 0.800, alpha: 1.0)/*#66CCFF*/
     }
 }
-
-class yourclass: UIViewController, UITabBarDelegate {
-    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        //This method will be called when user changes tab.
-    }
-}

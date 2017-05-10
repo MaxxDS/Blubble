@@ -11,6 +11,7 @@ import Parse
 import Bolts
 
 
+
 class ViewControllerHome: UIViewController {
 
 
@@ -33,15 +34,11 @@ class ViewControllerHome: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let testObject = PFObject(className: "TestObject")
-//        testObject["foo"] = "bar"
-//        testObject.saveInBackground { (Bool, Error) in
-//            print("Object has been saved.")
-//        }
+
         
         initUI()
         initData()
+    
 
         // Do any additional setup after loading the view.
     }
@@ -52,7 +49,7 @@ class ViewControllerHome: UIViewController {
     }
     
     func initData (){
-//        instructionsLabel.text = instructions
+
     }
     
     func initUI(){
@@ -83,9 +80,6 @@ class ViewControllerHome: UIViewController {
     }
     
 
-//    
-//    var instructions : String =
-//    "Instructions: Appuyer alternativememt sur le bouton gauche et le bouton droit pour faire grossir la bulle !!"
     
     func rateApp(appId: String, completion: @escaping ((_ success: Bool)->())) {
         guard let url = URL(string : "itms-apps://itunes.apple.com/app/" + appId) else {
@@ -98,6 +92,8 @@ class ViewControllerHome: UIViewController {
         }
         UIApplication.shared.open(url, options: [:], completionHandler: completion)
     }
+
+
 
     /*
     // MARK: - Navigation

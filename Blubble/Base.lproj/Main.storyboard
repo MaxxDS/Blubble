@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Z5V-BJ-LDh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,11 +22,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0c6-r9-rJ0">
-                                <rect key="frame" x="88" y="248" width="201" height="201"/>
+                                <rect key="frame" x="88" y="248" width="201" height="250"/>
                                 <state key="normal" title="PLAY" image="icon-video-overlay-play"/>
                                 <connections>
                                     <action selector="buttonPlayPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sUk-M0-2fR"/>
@@ -42,7 +42,7 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions: Appuyer alternativement sur le bouton gauche et le bouton droit pour faire grossir la bulle !!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1g-NR-d6C">
-                                <rect key="frame" x="7" y="493" width="296" height="94"/>
+                                <rect key="frame" x="7" y="542" width="296" height="94"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="296" id="EG9-hD-l3W"/>
@@ -53,7 +53,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="JQI-F2-AOU">
-                                <rect key="frame" x="311" y="493" width="57" height="94"/>
+                                <rect key="frame" x="311" y="542" width="57" height="94"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBoldItalic" family="Avenir Next Condensed" pointSize="20"/>
                                 <state key="normal">
                                     <string key="title">  Noter     
@@ -94,26 +94,6 @@
             </objects>
             <point key="canvasLocation" x="-148" y="138.98050974512745"/>
         </scene>
-        <!--high scores-->
-        <scene sceneID="Oeu-0R-Lmt">
-            <objects>
-                <viewController id="Z6f-aq-z0G" customClass="ViewControllerHighScore" customModule="Blubble" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="65o-pn-TRu"/>
-                        <viewControllerLayoutGuide type="bottom" id="dUZ-2k-Zn0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ei5-cx-el0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="high scores" image="trophy-7" id="gdc-lb-R7E"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZD0-Vl-tfy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-148" y="898"/>
-        </scene>
         <!--View Controller Play Ground-->
         <scene sceneID="PEP-zc-4OM">
             <objects>
@@ -123,11 +103,11 @@
                         <viewControllerLayoutGuide type="bottom" id="ehq-fk-LLf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2vy-X5-IHd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwM-Pc-Egy">
-                                <rect key="frame" x="16" y="484" width="100" height="120"/>
+                                <rect key="frame" x="16" y="533" width="100" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Uil-r0-VFy"/>
                                 </constraints>
@@ -137,7 +117,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xza-NR-sSe">
-                                <rect key="frame" x="259" y="484" width="100" height="120"/>
+                                <rect key="frame" x="259" y="533" width="100" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="i3x-Sa-zNN"/>
                                     <constraint firstAttribute="height" constant="120" id="q7h-ks-J5H"/>
@@ -153,13 +133,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIx-9P-1Py">
-                                <rect key="frame" x="124" y="485" width="127" height="113"/>
+                                <rect key="frame" x="124" y="534" width="127" height="113"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-HeavyItalic" family="Avenir Next Condensed" pointSize="67"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rta-ig-iwt">
-                                <rect key="frame" x="159" y="485" width="57" height="21"/>
+                                <rect key="frame" x="159" y="534" width="57" height="21"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBoldItalic" family="Avenir Next Condensed" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -184,13 +164,24 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Z5V-BJ-LDh" kind="show" id="qGP-Qc-fLs"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="YR1-5h-eQ1"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bulle" translatesAutoresizingMaskIntoConstraints="NO" id="j45-YD-ZHu">
                                 <rect key="frame" x="159" y="305" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEa-3o-iBA">
+                                <rect key="frame" x="280" y="28" width="79" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-MediumItalic" family="Avenir Next Condensed" pointSize="17"/>
+                                <state key="normal" title="Classement">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showLeaderButtonPressed:" destination="9aD-iR-vhW" eventType="touchUpInside" id="t9l-uU-cXL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -223,37 +214,12 @@
                         <outlet property="imageBulle" destination="j45-YD-ZHu" id="huE-nJ-rey"/>
                         <outlet property="replayButton" destination="TIg-io-LWe" id="cfG-hx-TSo"/>
                         <outlet property="scoreLabel" destination="EIx-9P-1Py" id="sVV-UC-Jdr"/>
+                        <outlet property="showLeaderButton" destination="CEa-3o-iBA" id="nih-bL-ksv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWO-sE-gZV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="639" y="-626"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="3QH-yw-XRF">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Z5V-BJ-LDh" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Erd-CJ-qwl">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="cDP-dD-axa"/>
-                        <segue destination="Z6f-aq-z0G" kind="relationship" relationship="viewControllers" id="74N-Ml-5ag"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Asn-FG-xmJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1087.2" y="138.98050974512745"/>
+            <point key="canvasLocation" x="634" y="-623"/>
         </scene>
     </scenes>
     <resources>
@@ -261,6 +227,5 @@
         <image name="bulle" width="313" height="313"/>
         <image name="home-7" width="30" height="30"/>
         <image name="icon-video-overlay-play" width="600" height="600"/>
-        <image name="trophy-7" width="30" height="30"/>
     </resources>
 </document>
