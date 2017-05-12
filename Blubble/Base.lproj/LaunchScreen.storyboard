@@ -22,9 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BLUBBLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4a-21-DtE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLUBBLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4a-21-DtE">
                                 <rect key="frame" x="0.0" y="236" width="375" height="170"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-HeavyItalic" family="Avenir Next Condensed" pointSize="78"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -32,15 +31,19 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bulle" translatesAutoresizingMaskIntoConstraints="NO" id="Zm4-Ye-y4s">
-                                <rect key="frame" x="28" y="173" width="323" height="336"/>
+                                <rect key="frame" x="28" y="173" width="319" height="336"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Zm4-Ye-y4s" secondAttribute="trailing" constant="8" id="FKz-Hy-wwH"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="i4a-21-DtE" secondAttribute="bottom" constant="261" id="6Fy-wm-wda"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Zm4-Ye-y4s" secondAttribute="bottom" constant="158" id="SNn-ak-6Lt"/>
+                            <constraint firstItem="Zm4-Ye-y4s" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Uml-lt-dSF"/>
                             <constraint firstItem="Zm4-Ye-y4s" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="12" id="ZFA-Ii-HWd"/>
+                            <constraint firstItem="i4a-21-DtE" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="216" id="keV-5l-7ZO"/>
                             <constraint firstItem="Zm4-Ye-y4s" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="153" id="lzq-Ta-g2D"/>
+                            <constraint firstAttribute="trailing" secondItem="i4a-21-DtE" secondAttribute="trailing" id="mg3-HL-ejB"/>
+                            <constraint firstItem="i4a-21-DtE" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="x4m-Zl-9JR"/>
                         </constraints>
                     </view>
                 </viewController>

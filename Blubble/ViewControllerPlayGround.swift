@@ -62,8 +62,8 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
             buttonRight.backgroundColor = UIColor.white
             buttonLeft.backgroundColor = UIColor.myGreenColor()
             score += 1
-            imageBulle.frame.size.width = imageBulle.frame.size.width * 1.015
-            imageBulle.frame.size.height = imageBulle.frame.size.height * 1.015
+            imageBulle.frame.size.width = imageBulle.frame.size.width * 1.025
+            imageBulle.frame.size.height = imageBulle.frame.size.height * 1.025
             imageBulle.center.x = self.view.center.x
             imageBulle.center.y = self.view.center.y
             scoreLabel.text = ("\(score)")
@@ -175,7 +175,7 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
     //initiate gamecenter
     func authenticateLocalPlayer(){
         
-        var localPlayer = GKLocalPlayer.localPlayer()
+        let localPlayer = GKLocalPlayer.localPlayer()
         
         localPlayer.authenticateHandler = {(viewController, error) -> Void in
             
@@ -193,8 +193,8 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
     
     //shows leaderboard screen
     func showLeader() {
-        var vc = self.view?.window?.rootViewController
-        var gc = GKGameCenterViewController()
+        _ = self.view?.window?.rootViewController
+        let gc = GKGameCenterViewController()
         gc.gameCenterDelegate = self
         self.present(gc, animated: true, completion: nil)
     }
@@ -212,11 +212,11 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
         //check if user is signed in
         if GKLocalPlayer.localPlayer().isAuthenticated {
             
-            var scoreReporter = GKScore(leaderboardIdentifier: "LesPlusGrossesBlubbles") //leaderboard id here
+            let scoreReporter = GKScore(leaderboardIdentifier: "LesPlusGrossesBlubbles") //leaderboard id here
             
             scoreReporter.value = Int64(score) //score variable here (same as above)
             
-            var scoreArray: [GKScore] = [scoreReporter]
+            let scoreArray: [GKScore] = [scoreReporter]
             
             GKScore.report(scoreArray, withCompletionHandler: { (error) in
                 if error != nil {
