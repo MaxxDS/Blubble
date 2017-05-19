@@ -138,7 +138,7 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
         
         if (count > 0) {
             count -= 1
-            countDownLabel.text = ("\(count)")
+            countDownLabel.text = (" \(count) ")
             
         }
         

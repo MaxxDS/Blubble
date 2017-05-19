@@ -29,7 +29,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0c6-r9-rJ0" secondAttribute="height" multiplier="1:1" id="5yj-dX-viu"/>
                                 </constraints>
-                                <state key="normal" title="PLAY" image="icon-video-overlay-play"/>
+                                <state key="normal" image="icon-video-overlay-play"/>
                                 <connections>
                                     <action selector="buttonPlayPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sUk-M0-2fR"/>
                                     <segue destination="9aD-iR-vhW" kind="show" id="Tdz-Yi-Vis"/>
@@ -84,9 +84,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="4xE-uD-yXK" secondAttribute="height" multiplier="183:47" id="0JX-V6-ptL"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
