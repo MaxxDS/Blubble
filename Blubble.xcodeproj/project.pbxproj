@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F008D4A81F3853EF0065E821 /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008D4A71F3853EF0065E821 /* GIF.swift */; };
+		F008D4AA1F385C660065E821 /* BubbleBurst.gif in Resources */ = {isa = PBXBuildFile; fileRef = F008D4A91F385C660065E821 /* BubbleBurst.gif */; };
 		F06923001EC0CFE9003B8C8B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06922FE1EC0CFE9003B8C8B /* Bolts.framework */; };
 		F06923011EC0CFE9003B8C8B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06922FF1EC0CFE9003B8C8B /* Parse.framework */; };
 		F06923031EC0D03C003B8C8B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06923021EC0D03C003B8C8B /* AudioToolbox.framework */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F008D4A71F3853EF0065E821 /* GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
+		F008D4A91F385C660065E821 /* BubbleBurst.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = BubbleBurst.gif; sourceTree = "<group>"; };
 		F06922FE1EC0CFE9003B8C8B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		F06922FF1EC0CFE9003B8C8B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		F06923021EC0D03C003B8C8B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -164,6 +168,7 @@
 			children = (
 				F0F8E02F1EC3A4E100B209D2 /* Blubble.entitlements */,
 				F0E7F1AB1EBC710500466B9B /* Main.storyboard */,
+				F008D4A91F385C660065E821 /* BubbleBurst.gif */,
 				F0E7F1A71EBC710500466B9B /* AppDelegate.swift */,
 				F0E7F1D51EBC721B00466B9B /* Controllers */,
 				F0E7F1D61EBC723F00466B9B /* Views */,
@@ -214,6 +219,7 @@
 		F0E7F1D81EBC725C00466B9B /* Modals */ = {
 			isa = PBXGroup;
 			children = (
+				F008D4A71F3853EF0065E821 /* GIF.swift */,
 			);
 			name = Modals;
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 				F0E7F1B21EBC710500466B9B /* LaunchScreen.storyboard in Resources */,
 				F0E7F1AF1EBC710500466B9B /* Assets.xcassets in Resources */,
 				F0E7F1AD1EBC710500466B9B /* Main.storyboard in Resources */,
+				F008D4AA1F385C660065E821 /* BubbleBurst.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F008D4A81F3853EF0065E821 /* GIF.swift in Sources */,
 				F0E7F1DE1EBC781800466B9B /* Extension.swift in Sources */,
 				F0E7F1E01EBC91F400466B9B /* ViewControllerPlayGround.swift in Sources */,
 				F0E7F1A81EBC710500466B9B /* AppDelegate.swift in Sources */,

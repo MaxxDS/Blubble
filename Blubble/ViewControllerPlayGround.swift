@@ -29,8 +29,9 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
     
     @IBOutlet var scoreLabel: UILabel!
     
-    @IBOutlet var imageBulle: UIImageView!
+//    @IBOutlet var imageBulle: UIImageView!
     
+    @IBOutlet var GifView: UIImageView!
     
     @IBOutlet var replayButton: UIButton!
     
@@ -62,10 +63,15 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
             buttonRight.backgroundColor = UIColor.white
             buttonLeft.backgroundColor = UIColor.myGreenColor()
             score += 1
-            imageBulle.frame.size.width = imageBulle.frame.size.width * 1.025
-            imageBulle.frame.size.height = imageBulle.frame.size.height * 1.025
-            imageBulle.center.x = self.view.center.x
-            imageBulle.center.y = self.view.center.y
+//            imageBulle.frame.size.width = imageBulle.frame.size.width * 1.025
+//            imageBulle.frame.size.height = imageBulle.frame.size.height * 1.025
+//            imageBulle.center.x = self.view.center.x
+//            imageBulle.center.y = self.view.center.y
+            
+            GifView.frame.size.width = GifView.frame.size.width * 1.025
+            GifView.frame.size.height = GifView.frame.size.height * 1.025
+            GifView.center.x = self.view.center.x
+            GifView.center.y = self.view.center.y
             scoreLabel.text = ("\(score)")
             
             
@@ -120,8 +126,15 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
         buttonRight.layer.borderColor = UIColor.white.cgColor
         buttonRight.backgroundColor = UIColor.myGreenColor()
         
-        imageBulle.center.x = self.view.center.x
-        imageBulle.center.y = self.view.center.y
+//        imageBulle.center.x = self.view.center.x
+//        imageBulle.center.y = self.view.center.y
+        
+        GifView.frame.size.width = 80
+        GifView.frame.size.height = 48
+        GifView.center.x = self.view.center.x
+        GifView.center.y = self.view.center.y
+        
+        GifView.loadGif(name: "BubbleBurst")
     }
     
     
@@ -165,10 +178,15 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
         replayButton.isHidden = true
         buttonLeft.isEnabled = true
         buttonRight.isEnabled = true
-        imageBulle.frame.size.width = 48
-        imageBulle.frame.size.height = 48
-        imageBulle.center.x = self.view.center.x
-        imageBulle.center.y = self.view.center.y
+//        imageBulle.frame.size.width = 48
+//        imageBulle.frame.size.height = 48
+//        imageBulle.center.x = self.view.center.x
+//        imageBulle.center.y = self.view.center.y
+        
+        GifView.frame.size.width = 80
+        GifView.frame.size.height = 48
+        GifView.center.x = self.view.center.x
+        GifView.center.y = self.view.center.y
     }
     
     

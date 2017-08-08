@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -48,13 +48,13 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions: Appuyer alternativement sur le bouton gauche et le bouton droit pour faire grossir la bulle !!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k1g-NR-d6C">
                                         <rect key="frame" x="0.0" y="0.0" width="296" height="94"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="296" id="EG9-hD-l3W"/>
                                             <constraint firstAttribute="height" constant="94" id="MDk-j3-0c6"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBoldItalic" family="Avenir Next Condensed" pointSize="20"/>
-                                        <color key="textColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqv-Ak-YVq">
@@ -86,7 +86,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0c6-r9-rJ0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8Yv-G0-9K6"/>
                             <constraint firstAttribute="trailing" secondItem="w5T-Dg-lKU" secondAttribute="trailing" constant="5" id="OcB-lF-u9j"/>
@@ -125,6 +125,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bulle" translatesAutoresizingMaskIntoConstraints="NO" id="j45-YD-ZHu">
+                                <rect key="frame" x="195" y="342" width="9" height="8"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BubbleBurst.gif" translatesAutoresizingMaskIntoConstraints="NO" id="f3V-Hp-1TF">
+                                <rect key="frame" x="-153" y="144" width="681" height="379"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwM-Pc-Egy">
                                 <rect key="frame" x="16" y="533" width="100" height="120"/>
                                 <constraints>
@@ -185,10 +194,6 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="YR1-5h-eQ1"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bulle" translatesAutoresizingMaskIntoConstraints="NO" id="j45-YD-ZHu">
-                                <rect key="frame" x="159" y="305" width="45" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEa-3o-iBA">
                                 <rect key="frame" x="288" y="28" width="71" height="36"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-MediumItalic" family="Avenir Next Condensed" pointSize="17"/>
@@ -200,7 +205,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TIg-io-LWe" firstAttribute="top" secondItem="xaA-eS-o3M" secondAttribute="bottom" constant="76" id="13Z-hd-8g9"/>
                             <constraint firstItem="rwM-Pc-Egy" firstAttribute="firstBaseline" secondItem="Xza-NR-sSe" secondAttribute="baseline" id="2NQ-pf-ff8"/>
@@ -230,11 +235,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="GifView" destination="f3V-Hp-1TF" id="ecm-Iy-EpU"/>
                         <outlet property="Label" destination="iRs-rF-nui" id="HOx-6g-lD4"/>
                         <outlet property="buttonLeft" destination="rwM-Pc-Egy" id="p8g-uY-XFm"/>
                         <outlet property="buttonRight" destination="Xza-NR-sSe" id="MZl-Hc-dSQ"/>
                         <outlet property="countDownLabel" destination="iRs-rF-nui" id="Qhr-U2-4tl"/>
-                        <outlet property="imageBulle" destination="j45-YD-ZHu" id="huE-nJ-rey"/>
                         <outlet property="replayButton" destination="TIg-io-LWe" id="cfG-hx-TSo"/>
                         <outlet property="scoreLabel" destination="EIx-9P-1Py" id="sVV-UC-Jdr"/>
                         <outlet property="showLeaderButton" destination="CEa-3o-iBA" id="nih-bL-ksv"/>
@@ -242,10 +247,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWO-sE-gZV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="634" y="-623"/>
+            <point key="canvasLocation" x="632.79999999999995" y="-623.83808095952031"/>
         </scene>
     </scenes>
     <resources>
+        <image name="BubbleBurst.gif" width="681" height="379"/>
         <image name="Command-Reset" width="256" height="256"/>
         <image name="bulle" width="313" height="313"/>
         <image name="home-7" width="30" height="30"/>
