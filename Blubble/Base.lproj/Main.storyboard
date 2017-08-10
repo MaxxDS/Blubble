@@ -46,21 +46,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xE-uD-yXK">
                                 <rect key="frame" x="4.5" y="542" width="366" height="94"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions: Appuyer alternativement sur le bouton gauche et le bouton droit pour faire grossir la bulle !!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k1g-NR-d6C">
-                                        <rect key="frame" x="0.0" y="0.0" width="296" height="94"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="Instructions: Appuyer alternativement sur le bouton gauche et le bouton droit pour faire grossir la bulle !!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k1g-NR-d6C">
+                                        <rect key="frame" x="0.0" y="0.0" width="305" height="94"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="296" id="EG9-hD-l3W"/>
+                                            <constraint firstAttribute="width" constant="305" id="EG9-hD-l3W"/>
                                             <constraint firstAttribute="height" constant="94" id="MDk-j3-0c6"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBoldItalic" family="Avenir Next Condensed" pointSize="20"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqv-Ak-YVq">
-                                        <rect key="frame" x="296" y="0.0" width="13" height="94"/>
+                                        <rect key="frame" x="305" y="0.0" width="4" height="94"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="13" id="HjT-q7-1Ti"/>
                                             <constraint firstAttribute="height" constant="94" id="Lrw-fQ-u6E"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -125,15 +125,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bulle" translatesAutoresizingMaskIntoConstraints="NO" id="j45-YD-ZHu">
-                                <rect key="frame" x="195" y="342" width="9" height="8"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BubbleBurst.gif" translatesAutoresizingMaskIntoConstraints="NO" id="f3V-Hp-1TF">
-                                <rect key="frame" x="-153" y="144" width="681" height="379"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwM-Pc-Egy">
                                 <rect key="frame" x="16" y="533" width="100" height="120"/>
                                 <constraints>
@@ -204,6 +195,10 @@
                                     <action selector="showLeaderButtonPressed:" destination="9aD-iR-vhW" eventType="touchUpInside" id="t9l-uU-cXL"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BRR-IV-et9">
+                                <rect key="frame" x="67" y="282" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -235,11 +230,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="GifView" destination="f3V-Hp-1TF" id="ecm-Iy-EpU"/>
                         <outlet property="Label" destination="iRs-rF-nui" id="HOx-6g-lD4"/>
                         <outlet property="buttonLeft" destination="rwM-Pc-Egy" id="p8g-uY-XFm"/>
                         <outlet property="buttonRight" destination="Xza-NR-sSe" id="MZl-Hc-dSQ"/>
                         <outlet property="countDownLabel" destination="iRs-rF-nui" id="Qhr-U2-4tl"/>
+                        <outlet property="imageView" destination="BRR-IV-et9" id="0WB-CC-phU"/>
                         <outlet property="replayButton" destination="TIg-io-LWe" id="cfG-hx-TSo"/>
                         <outlet property="scoreLabel" destination="EIx-9P-1Py" id="sVV-UC-Jdr"/>
                         <outlet property="showLeaderButton" destination="CEa-3o-iBA" id="nih-bL-ksv"/>
@@ -251,9 +246,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BubbleBurst.gif" width="681" height="379"/>
         <image name="Command-Reset" width="256" height="256"/>
-        <image name="bulle" width="313" height="313"/>
         <image name="home-7" width="30" height="30"/>
         <image name="icon-video-overlay-play" width="600" height="600"/>
     </resources>

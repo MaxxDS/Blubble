@@ -10,6 +10,7 @@ import UIKit
 import Parse
 import Bolts
 import GameKit
+import SwiftyGif
 
 class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
 {
@@ -29,21 +30,29 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
     
     @IBOutlet var scoreLabel: UILabel!
     
-//    @IBOutlet var imageBulle: UIImageView!
-    
-    @IBOutlet var GifView: UIImageView!
+//    @IBOutlet var GifView: UIImageView!
+//    
+//    @IBOutlet var JpgView: UIImageView!
     
     @IBOutlet var replayButton: UIButton!
     
     @IBOutlet var Label: UILabel!
     
+    @IBOutlet var imageView: UIImageView!
+    
+    let gifManager = SwiftyGifManager(memoryLimit:20)
+    
+    let gif = UIImage(gifName: "BubbleBurst.gif")
+    
     var score : Int = 0
     
     var count = 0
     
+    var countGameOver = 0
+    
     var timer : Timer? = nil
     
-    
+    var timerGameOver : Timer? = nil
     
     @IBOutlet var buttonLeft: UIButton!
     
@@ -63,15 +72,22 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
             buttonRight.backgroundColor = UIColor.white
             buttonLeft.backgroundColor = UIColor.myGreenColor()
             score += 1
-//            imageBulle.frame.size.width = imageBulle.frame.size.width * 1.025
-//            imageBulle.frame.size.height = imageBulle.frame.size.height * 1.025
-//            imageBulle.center.x = self.view.center.x
-//            imageBulle.center.y = self.view.center.y
             
-            GifView.frame.size.width = GifView.frame.size.width * 1.025
-            GifView.frame.size.height = GifView.frame.size.height * 1.025
-            GifView.center.x = self.view.center.x
-            GifView.center.y = self.view.center.y
+//            JpgView.frame.size.width = JpgView.frame.size.width * 1.025
+//            JpgView.frame.size.height = JpgView.frame.size.height * 1.025
+//            JpgView.center.x = self.view.center.x
+//            JpgView.center.y = self.view.center.y
+//            
+//            GifView.frame.size.width = GifView.frame.size.width * 1.025
+//            GifView.frame.size.height = GifView.frame.size.height * 1.025
+//            GifView.center.x = self.view.center.x
+//            GifView.center.y = self.view.center.y
+            
+            imageView.frame.size.width = imageView.frame.size.width * 1.025
+            imageView.frame.size.height = imageView.frame.size.height * 1.025
+            imageView.center.x = self.view.center.x
+            imageView.center.y = self.view.center.y
+            
             scoreLabel.text = ("\(score)")
             
             
@@ -87,6 +103,8 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
         
         countDownLabel.text = "\(count)"
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewControllerPlayGround.update), userInfo: nil, repeats: true)
+        
+//        timerGameOver = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewControllerPlayGround.update1), userInfo: nil, repeats: true)
     }
     
     
@@ -99,6 +117,7 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
        
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewControllerPlayGround.update), userInfo: nil, repeats: true)
         
+//        timerGameOver = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewControllerPlayGround.update1), userInfo: nil, repeats: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -114,6 +133,12 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
     }
     
     func initUI() {
+        
+
+        self.imageView.setGifImage(gif, manager: gifManager, loopCount: 1)
+
+        view.addSubview(imageView)
+        
         buttonLeft.backgroundColor = .clear
         buttonLeft.layer.cornerRadius = 10
         buttonLeft.layer.borderWidth = 3
@@ -126,23 +151,38 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
         buttonRight.layer.borderColor = UIColor.white.cgColor
         buttonRight.backgroundColor = UIColor.myGreenColor()
         
-//        imageBulle.center.x = self.view.center.x
-//        imageBulle.center.y = self.view.center.y
+//        JpgView.isHidden = false
+//        GifView.isHidden = false
+//        
+//        JpgView.frame.size.width = 80
+//        JpgView.frame.size.height = 48
+//        JpgView.center.x = self.view.center.x
+//        JpgView.center.y = self.view.center.y
+//        
+//        GifView.frame.size.width = 80
+//        GifView.frame.size.height = 48
+//        GifView.center.x = self.view.center.x
+//        GifView.center.y = self.view.center.y
+//        
+//        GifView.loadGif(name: "BubbleBurst")
         
-        GifView.frame.size.width = 80
-        GifView.frame.size.height = 48
-        GifView.center.x = self.view.center.x
-        GifView.center.y = self.view.center.y
+        imageView.frame.size.width = 80
+        imageView.frame.size.height = 48
+        imageView.center.x = self.view.center.x
+        imageView.center.y = self.view.center.y
         
-        GifView.loadGif(name: "BubbleBurst")
+        self.imageView.stopAnimatingGif()
+        
     }
     
     
     func initData() {
-        count = 20
+        count = 5
+        countGameOver = 6
         score = 0
         scoreLabel.text = ("\(score)")
         replayButton.isHidden = true
+        
         
     }
     
@@ -161,6 +201,19 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
         
     }
     
+//    func update1() {
+//        if (countGameOver > 0) {
+//            countGameOver -= 1
+//
+//            
+//        }
+//        
+//        if (countGameOver == 0){
+//            GifView.isHidden = true
+//        }
+//        
+//    }
+    
     func gameOver () {
         timer?.invalidate()
         timer = nil
@@ -168,7 +221,10 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
         replayButton.isHidden = false
         buttonLeft.isEnabled = false
         buttonRight.isEnabled = false
+//        JpgView.isHidden = true
+//        GifView.isHidden = false
         saveHighscore(score: score)
+        self.imageView.startAnimatingGif()
         
     }
     
@@ -178,15 +234,23 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
         replayButton.isHidden = true
         buttonLeft.isEnabled = true
         buttonRight.isEnabled = true
-//        imageBulle.frame.size.width = 48
-//        imageBulle.frame.size.height = 48
-//        imageBulle.center.x = self.view.center.x
-//        imageBulle.center.y = self.view.center.y
+//        JpgView.isHidden = false
+//        GifView.isHidden = false
+//        
+//        JpgView.frame.size.width = 80
+//        JpgView.frame.size.height = 48
+//        JpgView.center.x = self.view.center.x
+//        JpgView.center.y = self.view.center.y
+//        
+//        GifView.frame.size.width = 80
+//        GifView.frame.size.height = 48
+//        GifView.center.x = self.view.center.x
+//        GifView.center.y = self.view.center.y
         
-        GifView.frame.size.width = 80
-        GifView.frame.size.height = 48
-        GifView.center.x = self.view.center.x
-        GifView.center.y = self.view.center.y
+        imageView.frame.size.width = 80
+        imageView.frame.size.height = 48
+        imageView.center.x = self.view.center.x
+        imageView.center.y = self.view.center.y
     }
     
     
@@ -246,6 +310,8 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
             
         }
     }
+    
+
     /*
      // MARK: - Navigation
      

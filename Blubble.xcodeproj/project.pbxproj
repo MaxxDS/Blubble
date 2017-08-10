@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23C03F61588C80ADCF5BFD5C /* Pods_BlubbleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05158EF735F25563D54FA815 /* Pods_BlubbleUITests.framework */; };
+		7B5F2E5A22EF536A8839F781 /* Pods_Blubble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADBA5E08BBE3A9E6A9FC4A7 /* Pods_Blubble.framework */; };
+		DE867E4CF4D524331B57CA6F /* Pods_BlubbleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E2ADA158854F0BE9D1A083 /* Pods_BlubbleTests.framework */; };
 		F008D4A81F3853EF0065E821 /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008D4A71F3853EF0065E821 /* GIF.swift */; };
-		F008D4AA1F385C660065E821 /* BubbleBurst.gif in Resources */ = {isa = PBXBuildFile; fileRef = F008D4A91F385C660065E821 /* BubbleBurst.gif */; };
 		F06923001EC0CFE9003B8C8B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06922FE1EC0CFE9003B8C8B /* Bolts.framework */; };
 		F06923011EC0CFE9003B8C8B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06922FF1EC0CFE9003B8C8B /* Parse.framework */; };
 		F06923031EC0D03C003B8C8B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06923021EC0D03C003B8C8B /* AudioToolbox.framework */; };
@@ -21,6 +23,8 @@
 		F06923111EC0D0C2003B8C8B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06923101EC0D0C2003B8C8B /* SystemConfiguration.framework */; };
 		F06923131EC0D0D7003B8C8B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F06923121EC0D0D7003B8C8B /* libz.tbd */; };
 		F06923151EC0D0EC003B8C8B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F06923141EC0D0EC003B8C8B /* libsqlite3.tbd */; };
+		F075671C1F3C41670032E7E6 /* gifTest.gif in Resources */ = {isa = PBXBuildFile; fileRef = F075671B1F3C41670032E7E6 /* gifTest.gif */; };
+		F07567201F3C5FBE0032E7E6 /* BubbleBurst.gif in Resources */ = {isa = PBXBuildFile; fileRef = F075671F1F3C5FBE0032E7E6 /* BubbleBurst.gif */; };
 		F0E7F1A81EBC710500466B9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1A71EBC710500466B9B /* AppDelegate.swift */; };
 		F0E7F1AD1EBC710500466B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E7F1AB1EBC710500466B9B /* Main.storyboard */; };
 		F0E7F1AF1EBC710500466B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E7F1AE1EBC710500466B9B /* Assets.xcassets */; };
@@ -51,8 +55,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05158EF735F25563D54FA815 /* Pods_BlubbleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlubbleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07BEEBBC874A3AED503F69CE /* Pods-Blubble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blubble.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blubble/Pods-Blubble.debug.xcconfig"; sourceTree = "<group>"; };
+		0C36A67F94367A69794A2FA0 /* Pods-BlubbleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlubbleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlubbleUITests/Pods-BlubbleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1D6767017FD6F8A63B5803B2 /* Pods-BlubbleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlubbleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlubbleTests/Pods-BlubbleTests.release.xcconfig"; sourceTree = "<group>"; };
+		5278D698437CA4050E2EFDE6 /* Pods-BlubbleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlubbleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlubbleUITests/Pods-BlubbleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		55AD952F1357E15FAD886B84 /* Pods-Blubble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blubble.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blubble/Pods-Blubble.release.xcconfig"; sourceTree = "<group>"; };
+		6D3591A57634949D9A428EC0 /* Pods-BlubbleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlubbleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlubbleTests/Pods-BlubbleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BADBA5E08BBE3A9E6A9FC4A7 /* Pods_Blubble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blubble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F008D4A71F3853EF0065E821 /* GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
-		F008D4A91F385C660065E821 /* BubbleBurst.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = BubbleBurst.gif; sourceTree = "<group>"; };
 		F06922FE1EC0CFE9003B8C8B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		F06922FF1EC0CFE9003B8C8B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		F06923021EC0D03C003B8C8B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -65,6 +76,8 @@
 		F06923101EC0D0C2003B8C8B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F06923121EC0D0D7003B8C8B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F06923141EC0D0EC003B8C8B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		F075671B1F3C41670032E7E6 /* gifTest.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gifTest.gif; sourceTree = "<group>"; };
+		F075671F1F3C5FBE0032E7E6 /* BubbleBurst.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = BubbleBurst.gif; sourceTree = "<group>"; };
 		F0E7F1A41EBC710500466B9B /* Blubble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blubble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E7F1A71EBC710500466B9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0E7F1AC1EBC710500466B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +95,7 @@
 		F0E7F1DF1EBC91F400466B9B /* ViewControllerPlayGround.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPlayGround.swift; sourceTree = "<group>"; };
 		F0F8E02F1EC3A4E100B209D2 /* Blubble.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blubble.entitlements; sourceTree = "<group>"; };
 		F0F8E0301EC3A4EA00B209D2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		F7E2ADA158854F0BE9D1A083 /* Pods_BlubbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlubbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +116,7 @@
 				F06923031EC0D03C003B8C8B /* AudioToolbox.framework in Frameworks */,
 				F06923011EC0CFE9003B8C8B /* Parse.framework in Frameworks */,
 				F06923001EC0CFE9003B8C8B /* Bolts.framework in Frameworks */,
+				7B5F2E5A22EF536A8839F781 /* Pods_Blubble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE867E4CF4D524331B57CA6F /* Pods_BlubbleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,12 +132,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23C03F61588C80ADCF5BFD5C /* Pods_BlubbleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A6A3CB8018C3EC28F493CCB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07BEEBBC874A3AED503F69CE /* Pods-Blubble.debug.xcconfig */,
+				55AD952F1357E15FAD886B84 /* Pods-Blubble.release.xcconfig */,
+				6D3591A57634949D9A428EC0 /* Pods-BlubbleTests.debug.xcconfig */,
+				1D6767017FD6F8A63B5803B2 /* Pods-BlubbleTests.release.xcconfig */,
+				0C36A67F94367A69794A2FA0 /* Pods-BlubbleUITests.debug.xcconfig */,
+				5278D698437CA4050E2EFDE6 /* Pods-BlubbleUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F06922FD1EC0CFA7003B8C8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,8 +168,20 @@
 				F06923021EC0D03C003B8C8B /* AudioToolbox.framework */,
 				F06922FE1EC0CFE9003B8C8B /* Bolts.framework */,
 				F06922FF1EC0CFE9003B8C8B /* Parse.framework */,
+				BADBA5E08BBE3A9E6A9FC4A7 /* Pods_Blubble.framework */,
+				F7E2ADA158854F0BE9D1A083 /* Pods_BlubbleTests.framework */,
+				05158EF735F25563D54FA815 /* Pods_BlubbleUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F075671A1F3C39E10032E7E6 /* Gifs */ = {
+			isa = PBXGroup;
+			children = (
+				F075671B1F3C41670032E7E6 /* gifTest.gif */,
+				F075671F1F3C5FBE0032E7E6 /* BubbleBurst.gif */,
+			);
+			name = Gifs;
 			sourceTree = "<group>";
 		};
 		F0E7F19B1EBC710500466B9B = {
@@ -150,6 +192,7 @@
 				F0E7F1BB1EBC710500466B9B /* BlubbleTests */,
 				F0E7F1C61EBC710500466B9B /* BlubbleUITests */,
 				F0E7F1A51EBC710500466B9B /* Products */,
+				6A6A3CB8018C3EC28F493CCB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,9 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				F0F8E02F1EC3A4E100B209D2 /* Blubble.entitlements */,
-				F0E7F1AB1EBC710500466B9B /* Main.storyboard */,
-				F008D4A91F385C660065E821 /* BubbleBurst.gif */,
 				F0E7F1A71EBC710500466B9B /* AppDelegate.swift */,
+				F0E7F1AB1EBC710500466B9B /* Main.storyboard */,
+				F075671A1F3C39E10032E7E6 /* Gifs */,
 				F0E7F1D51EBC721B00466B9B /* Controllers */,
 				F0E7F1D61EBC723F00466B9B /* Views */,
 				F0E7F1D81EBC725C00466B9B /* Modals */,
@@ -246,9 +289,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0E7F1CC1EBC710500466B9B /* Build configuration list for PBXNativeTarget "Blubble" */;
 			buildPhases = (
+				45E3F9973DF2F24C6894DF17 /* [CP] Check Pods Manifest.lock */,
 				F0E7F1A01EBC710500466B9B /* Sources */,
 				F0E7F1A11EBC710500466B9B /* Frameworks */,
 				F0E7F1A21EBC710500466B9B /* Resources */,
+				1955160214281084E7479809 /* [CP] Embed Pods Frameworks */,
+				868B97A9A7E68AC92F372982 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,9 +309,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0E7F1CF1EBC710500466B9B /* Build configuration list for PBXNativeTarget "BlubbleTests" */;
 			buildPhases = (
+				0122C505311B125DD41573D9 /* [CP] Check Pods Manifest.lock */,
 				F0E7F1B41EBC710500466B9B /* Sources */,
 				F0E7F1B51EBC710500466B9B /* Frameworks */,
 				F0E7F1B61EBC710500466B9B /* Resources */,
+				412000BDCE7D8AF5A2144630 /* [CP] Embed Pods Frameworks */,
+				938F51CED294BE4F2E00B410 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -281,9 +330,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0E7F1D21EBC710500466B9B /* Build configuration list for PBXNativeTarget "BlubbleUITests" */;
 			buildPhases = (
+				F90EB17E870C3F68A2D0A682 /* [CP] Check Pods Manifest.lock */,
 				F0E7F1BF1EBC710500466B9B /* Sources */,
 				F0E7F1C01EBC710500466B9B /* Frameworks */,
 				F0E7F1C11EBC710500466B9B /* Resources */,
+				689149DFABCE287C069FD912 /* [CP] Embed Pods Frameworks */,
+				599FD2BFB15CCA20A23120F2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -360,7 +412,8 @@
 				F0E7F1B21EBC710500466B9B /* LaunchScreen.storyboard in Resources */,
 				F0E7F1AF1EBC710500466B9B /* Assets.xcassets in Resources */,
 				F0E7F1AD1EBC710500466B9B /* Main.storyboard in Resources */,
-				F008D4AA1F385C660065E821 /* BubbleBurst.gif in Resources */,
+				F075671C1F3C41670032E7E6 /* gifTest.gif in Resources */,
+				F07567201F3C5FBE0032E7E6 /* BubbleBurst.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +432,156 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0122C505311B125DD41573D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlubbleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1955160214281084E7479809 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Blubble/Pods-Blubble-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blubble/Pods-Blubble-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		412000BDCE7D8AF5A2144630 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlubbleTests/Pods-BlubbleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45E3F9973DF2F24C6894DF17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Blubble-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		599FD2BFB15CCA20A23120F2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlubbleUITests/Pods-BlubbleUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		689149DFABCE287C069FD912 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlubbleUITests/Pods-BlubbleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		868B97A9A7E68AC92F372982 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blubble/Pods-Blubble-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		938F51CED294BE4F2E00B410 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlubbleTests/Pods-BlubbleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F90EB17E870C3F68A2D0A682 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlubbleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F0E7F1A01EBC710500466B9B /* Sources */ = {
@@ -541,6 +744,7 @@
 		};
 		F0E7F1CD1EBC710500466B9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07BEEBBC874A3AED503F69CE /* Pods-Blubble.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PMTVV9K82U;
@@ -560,6 +764,7 @@
 		};
 		F0E7F1CE1EBC710500466B9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55AD952F1357E15FAD886B84 /* Pods-Blubble.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PMTVV9K82U;
@@ -579,6 +784,7 @@
 		};
 		F0E7F1D01EBC710500466B9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D3591A57634949D9A428EC0 /* Pods-BlubbleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -594,6 +800,7 @@
 		};
 		F0E7F1D11EBC710500466B9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D6767017FD6F8A63B5803B2 /* Pods-BlubbleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -609,6 +816,7 @@
 		};
 		F0E7F1D31EBC710500466B9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C36A67F94367A69794A2FA0 /* Pods-BlubbleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = PMTVV9K82U;
@@ -623,6 +831,7 @@
 		};
 		F0E7F1D41EBC710500466B9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5278D698437CA4050E2EFDE6 /* Pods-BlubbleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = PMTVV9K82U;

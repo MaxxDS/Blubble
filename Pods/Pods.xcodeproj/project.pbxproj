@@ -1,0 +1,884 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0534172160945D70CBC15F11D32EFD34 /* Pods-BlubbleUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FEAE44248C8C88A010282023F6AE53B9 /* Pods-BlubbleUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F25AF53766F6B3A17E8CDAB792A8639 /* SwiftyGif.h in Headers */ = {isa = PBXBuildFile; fileRef = B4DDA4B449CD1276127F121F222E3991 /* SwiftyGif.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2877A8F0C3DB8BAA77ED8F9A8F85199A /* SwiftyGif-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3923679871D476A1D85A269192F88F /* SwiftyGif-dummy.m */; };
+		2A99902336514C16C82C1F3ACDE31CC0 /* Pods-BlubbleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 953821AA362C5B5915635CDA320A5CFD /* Pods-BlubbleTests-dummy.m */; };
+		3D7D8C58AA4DB509C5EAD77FB2CAE459 /* Pods-Blubble-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF931F7036B8590A013F1D2BC186AE5 /* Pods-Blubble-dummy.m */; };
+		51ACD10F54B333253553562AAAB5610D /* SwiftyGif-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF37DC14285E69129712584A0E1DA38 /* SwiftyGif-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		523CBA3A16A013B0D6332F58CC66D52E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		54D70BB02CE14F06C4AD20B70563EEC2 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = AECA5800E34AB159B96FB033C505D504 /* Info.plist */; };
+		63425E2D5D7CD184778E7BA0D0447E38 /* Pods-Blubble-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3488E336E809F36CE9A6EC283AC4FE40 /* Pods-Blubble-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7415F9413F2B4FC817432E6658D95BFC /* Pods-BlubbleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBDD72FDDE8F8F132625FD06BC0B005 /* Pods-BlubbleTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		778745FFFDD200F4A6A6A1CD93A084D4 /* UIImage+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EB0DCCA7744D85766EC4C06FE9021E /* UIImage+SwiftyGif.swift */; };
+		B1675D9DC8B894F4DD207A73C1B8FB61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		B3EF0DE9607A05FE0AF74C306B8D691D /* Pods-BlubbleUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2110695E09EAF1A1EEF7470917FA3 /* Pods-BlubbleUITests-dummy.m */; };
+		BBF2CB8C4E72930AA434121601C87834 /* UIImageView+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D17E4C69C8FD43FCFEC033BDF588762 /* UIImageView+SwiftyGif.swift */; };
+		C66484FFEF4A4BCC5C209B32B9225539 /* SwiftyGifManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CFDCF9F6DB741A3EA518F439C2A1A1 /* SwiftyGifManager.swift */; };
+		D78AB6478A319CC869DA33C9FF23B8EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		EB1E1F9B8795E58F5E11E26BEE8093FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE5FAC96936A2D066E3A3D202561816A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8881D3FBB64115FDE9E51FB4EF87258;
+			remoteInfo = SwiftyGif;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		040BAB999EADB9C22816B504531E4890 /* Pods_BlubbleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BlubbleUITests.framework; path = "Pods-BlubbleUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09C7826F0434E51D20FF07DB3CF5C891 /* Pods-Blubble-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Blubble-resources.sh"; sourceTree = "<group>"; };
+		0C3E64888ECD0221285FC94D2DB2E7BD /* Pods-Blubble-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Blubble-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0D9E9A5ED45400B63C9D53FCAAF15872 /* Pods-BlubbleUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-BlubbleUITests.modulemap"; sourceTree = "<group>"; };
+		154ECDEDA403686D5F826866AD803DE3 /* Pods-BlubbleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlubbleTests.release.xcconfig"; sourceTree = "<group>"; };
+		16349AD8E1ADB820E25E2E6040E551CF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24CEDE2E90E7786ABEB9036E7FCE0926 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F208B6F3C590C12FB9A05D5820049B0 /* Pods-BlubbleUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BlubbleUITests-resources.sh"; sourceTree = "<group>"; };
+		3488E336E809F36CE9A6EC283AC4FE40 /* Pods-Blubble-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Blubble-umbrella.h"; sourceTree = "<group>"; };
+		37CFDCF9F6DB741A3EA518F439C2A1A1 /* SwiftyGifManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyGifManager.swift; path = SwiftyGif/SwiftyGifManager.swift; sourceTree = "<group>"; };
+		38449126738B598A35CD39E51F241B3E /* Pods-Blubble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Blubble.debug.xcconfig"; sourceTree = "<group>"; };
+		3999F8BF3E40DA1C4D22F19A2B992C47 /* Pods_Blubble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Blubble.framework; path = "Pods-Blubble.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		418A54B8593B9CFFD79B9544832DF4B7 /* Pods-Blubble-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Blubble-frameworks.sh"; sourceTree = "<group>"; };
+		427F3F4B9398C942F1A6996C824BE772 /* Pods-Blubble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Blubble.release.xcconfig"; sourceTree = "<group>"; };
+		4C7F3E4D265A834BEBF8CEEB570F9C93 /* Pods-BlubbleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlubbleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4DBDD72FDDE8F8F132625FD06BC0B005 /* Pods-BlubbleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BlubbleTests-umbrella.h"; sourceTree = "<group>"; };
+		5D17E4C69C8FD43FCFEC033BDF588762 /* UIImageView+SwiftyGif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+SwiftyGif.swift"; path = "SwiftyGif/UIImageView+SwiftyGif.swift"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6D848CBF6036CE4C7FF8C42ED92B3D97 /* Pods-BlubbleUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BlubbleUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		77599DC5F67291CFD242D3A5D6FB7E71 /* SwiftyGif.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyGif.xcconfig; sourceTree = "<group>"; };
+		7C78756ACED483F32D44EEE528E51C35 /* Pods-BlubbleUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BlubbleUITests-frameworks.sh"; sourceTree = "<group>"; };
+		7D3923679871D476A1D85A269192F88F /* SwiftyGif-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyGif-dummy.m"; sourceTree = "<group>"; };
+		8716861150BEFFA1018BC4E982140100 /* Pods-Blubble-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Blubble-acknowledgements.plist"; sourceTree = "<group>"; };
+		8AE83245B7D92B4218F33FC8CACCD781 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DD2110695E09EAF1A1EEF7470917FA3 /* Pods-BlubbleUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BlubbleUITests-dummy.m"; sourceTree = "<group>"; };
+		8E3B76AC1980628A246DF33678E8C2D1 /* Pods-BlubbleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlubbleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		953821AA362C5B5915635CDA320A5CFD /* Pods-BlubbleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BlubbleTests-dummy.m"; sourceTree = "<group>"; };
+		9A74114582B66FE2C562D39F6DB2FA8A /* Pods-BlubbleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-BlubbleTests.modulemap"; sourceTree = "<group>"; };
+		9E0CF70F70CB57A0AC345246E3F0E658 /* SwiftyGif-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyGif-prefix.pch"; sourceTree = "<group>"; };
+		AECA5800E34AB159B96FB033C505D504 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = SwiftyGif/Info.plist; sourceTree = "<group>"; };
+		B1E26A2745B6C9F64639C6691F2004F1 /* Pods-Blubble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Blubble.modulemap"; sourceTree = "<group>"; };
+		B4DDA4B449CD1276127F121F222E3991 /* SwiftyGif.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftyGif.h; path = SwiftyGif/SwiftyGif.h; sourceTree = "<group>"; };
+		C417FA8A22FA538BEDB0A0276AF848EF /* Pods-BlubbleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BlubbleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C4A2C4A4CAD5D08E973B6B222368B9A3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB42C13660DB5D5A9DC32D608CB36A1B /* SwiftyGif.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyGif.modulemap; sourceTree = "<group>"; };
+		CD0DE1C12E8AEAC80879A8559C93A84A /* Pods-BlubbleTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BlubbleTests-resources.sh"; sourceTree = "<group>"; };
+		CDF931F7036B8590A013F1D2BC186AE5 /* Pods-Blubble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Blubble-dummy.m"; sourceTree = "<group>"; };
+		D7481645BFC233DF2F1DBC8334A200B0 /* Pods-BlubbleTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BlubbleTests-frameworks.sh"; sourceTree = "<group>"; };
+		D8EB0DCCA7744D85766EC4C06FE9021E /* UIImage+SwiftyGif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+SwiftyGif.swift"; path = "SwiftyGif/UIImage+SwiftyGif.swift"; sourceTree = "<group>"; };
+		DAF37DC14285E69129712584A0E1DA38 /* SwiftyGif-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyGif-umbrella.h"; sourceTree = "<group>"; };
+		EB776E61E3B22AE75FBEEB3D7AD761D1 /* Pods_BlubbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BlubbleTests.framework; path = "Pods-BlubbleTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2F30F7B3BF48DCE4866E9D30E35111D /* Pods-BlubbleUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BlubbleUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F7BC6F138C1793B4F2CD48AB21BB6FC8 /* Pods-BlubbleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlubbleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FA3945671984DFB411B101E72325AEE6 /* Pods-BlubbleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BlubbleTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		FDDC30F1BBF1F19DCE32B403E53D23B6 /* SwiftyGif.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyGif.framework; path = SwiftyGif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEAE44248C8C88A010282023F6AE53B9 /* Pods-BlubbleUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BlubbleUITests-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CA73EF45743408985D703888596A2DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D78AB6478A319CC869DA33C9FF23B8EC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E5BAACCB214740609CA57746D4729D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1675D9DC8B894F4DD207A73C1B8FB61 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A6DD72E3789B0EF5D16C3447C40443D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB1E1F9B8795E58F5E11E26BEE8093FA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0D39E13DF8184787DB51393AA210F3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				523CBA3A16A013B0D6332F58CC66D52E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19825D10D4DD9653E417C005EBE50363 /* SwiftyGif */ = {
+			isa = PBXGroup;
+			children = (
+				AECA5800E34AB159B96FB033C505D504 /* Info.plist */,
+				B4DDA4B449CD1276127F121F222E3991 /* SwiftyGif.h */,
+				37CFDCF9F6DB741A3EA518F439C2A1A1 /* SwiftyGifManager.swift */,
+				D8EB0DCCA7744D85766EC4C06FE9021E /* UIImage+SwiftyGif.swift */,
+				5D17E4C69C8FD43FCFEC033BDF588762 /* UIImageView+SwiftyGif.swift */,
+				58D53C60F5974AB15FB53FD173B3F75C /* Support Files */,
+			);
+			name = SwiftyGif;
+			path = SwiftyGif;
+			sourceTree = "<group>";
+		};
+		27AB862FB923CFF9251F746AB1F7F5F7 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				63BEEF5D26F7B0D43EA7982C22622102 /* Pods-Blubble */,
+				B278207CE7C9051DF2F07084119F514E /* Pods-BlubbleTests */,
+				AE7C42EA8C76829451CA4352946432E2 /* Pods-BlubbleUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2FF5D676B93CAAB34B22828FA1FEAE60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3999F8BF3E40DA1C4D22F19A2B992C47 /* Pods_Blubble.framework */,
+				EB776E61E3B22AE75FBEEB3D7AD761D1 /* Pods_BlubbleTests.framework */,
+				040BAB999EADB9C22816B504531E4890 /* Pods_BlubbleUITests.framework */,
+				FDDC30F1BBF1F19DCE32B403E53D23B6 /* SwiftyGif.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58D53C60F5974AB15FB53FD173B3F75C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				16349AD8E1ADB820E25E2E6040E551CF /* Info.plist */,
+				CB42C13660DB5D5A9DC32D608CB36A1B /* SwiftyGif.modulemap */,
+				77599DC5F67291CFD242D3A5D6FB7E71 /* SwiftyGif.xcconfig */,
+				7D3923679871D476A1D85A269192F88F /* SwiftyGif-dummy.m */,
+				9E0CF70F70CB57A0AC345246E3F0E658 /* SwiftyGif-prefix.pch */,
+				DAF37DC14285E69129712584A0E1DA38 /* SwiftyGif-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyGif";
+			sourceTree = "<group>";
+		};
+		63BEEF5D26F7B0D43EA7982C22622102 /* Pods-Blubble */ = {
+			isa = PBXGroup;
+			children = (
+				24CEDE2E90E7786ABEB9036E7FCE0926 /* Info.plist */,
+				B1E26A2745B6C9F64639C6691F2004F1 /* Pods-Blubble.modulemap */,
+				0C3E64888ECD0221285FC94D2DB2E7BD /* Pods-Blubble-acknowledgements.markdown */,
+				8716861150BEFFA1018BC4E982140100 /* Pods-Blubble-acknowledgements.plist */,
+				CDF931F7036B8590A013F1D2BC186AE5 /* Pods-Blubble-dummy.m */,
+				418A54B8593B9CFFD79B9544832DF4B7 /* Pods-Blubble-frameworks.sh */,
+				09C7826F0434E51D20FF07DB3CF5C891 /* Pods-Blubble-resources.sh */,
+				3488E336E809F36CE9A6EC283AC4FE40 /* Pods-Blubble-umbrella.h */,
+				38449126738B598A35CD39E51F241B3E /* Pods-Blubble.debug.xcconfig */,
+				427F3F4B9398C942F1A6996C824BE772 /* Pods-Blubble.release.xcconfig */,
+			);
+			name = "Pods-Blubble";
+			path = "Target Support Files/Pods-Blubble";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				FC21277D0D953B13BEE5EB25881A9C6A /* Pods */,
+				2FF5D676B93CAAB34B22828FA1FEAE60 /* Products */,
+				27AB862FB923CFF9251F746AB1F7F5F7 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		AE7C42EA8C76829451CA4352946432E2 /* Pods-BlubbleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C4A2C4A4CAD5D08E973B6B222368B9A3 /* Info.plist */,
+				0D9E9A5ED45400B63C9D53FCAAF15872 /* Pods-BlubbleUITests.modulemap */,
+				F2F30F7B3BF48DCE4866E9D30E35111D /* Pods-BlubbleUITests-acknowledgements.markdown */,
+				6D848CBF6036CE4C7FF8C42ED92B3D97 /* Pods-BlubbleUITests-acknowledgements.plist */,
+				8DD2110695E09EAF1A1EEF7470917FA3 /* Pods-BlubbleUITests-dummy.m */,
+				7C78756ACED483F32D44EEE528E51C35 /* Pods-BlubbleUITests-frameworks.sh */,
+				2F208B6F3C590C12FB9A05D5820049B0 /* Pods-BlubbleUITests-resources.sh */,
+				FEAE44248C8C88A010282023F6AE53B9 /* Pods-BlubbleUITests-umbrella.h */,
+				8E3B76AC1980628A246DF33678E8C2D1 /* Pods-BlubbleUITests.debug.xcconfig */,
+				4C7F3E4D265A834BEBF8CEEB570F9C93 /* Pods-BlubbleUITests.release.xcconfig */,
+			);
+			name = "Pods-BlubbleUITests";
+			path = "Target Support Files/Pods-BlubbleUITests";
+			sourceTree = "<group>";
+		};
+		B278207CE7C9051DF2F07084119F514E /* Pods-BlubbleTests */ = {
+			isa = PBXGroup;
+			children = (
+				8AE83245B7D92B4218F33FC8CACCD781 /* Info.plist */,
+				9A74114582B66FE2C562D39F6DB2FA8A /* Pods-BlubbleTests.modulemap */,
+				C417FA8A22FA538BEDB0A0276AF848EF /* Pods-BlubbleTests-acknowledgements.markdown */,
+				FA3945671984DFB411B101E72325AEE6 /* Pods-BlubbleTests-acknowledgements.plist */,
+				953821AA362C5B5915635CDA320A5CFD /* Pods-BlubbleTests-dummy.m */,
+				D7481645BFC233DF2F1DBC8334A200B0 /* Pods-BlubbleTests-frameworks.sh */,
+				CD0DE1C12E8AEAC80879A8559C93A84A /* Pods-BlubbleTests-resources.sh */,
+				4DBDD72FDDE8F8F132625FD06BC0B005 /* Pods-BlubbleTests-umbrella.h */,
+				F7BC6F138C1793B4F2CD48AB21BB6FC8 /* Pods-BlubbleTests.debug.xcconfig */,
+				154ECDEDA403686D5F826866AD803DE3 /* Pods-BlubbleTests.release.xcconfig */,
+			);
+			name = "Pods-BlubbleTests";
+			path = "Target Support Files/Pods-BlubbleTests";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FC21277D0D953B13BEE5EB25881A9C6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19825D10D4DD9653E417C005EBE50363 /* SwiftyGif */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		20D5E483142486F7BA035AEB60A0F7D2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51ACD10F54B333253553562AAAB5610D /* SwiftyGif-umbrella.h in Headers */,
+				1F25AF53766F6B3A17E8CDAB792A8639 /* SwiftyGif.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A063406ADA6447D5D7917F99F08FFE8E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0534172160945D70CBC15F11D32EFD34 /* Pods-BlubbleUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA4DCE658275401582E8EA84D4F519E2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7415F9413F2B4FC817432E6658D95BFC /* Pods-BlubbleTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F86D200DD52B5B299F47101E354F9B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63425E2D5D7CD184778E7BA0D0447E38 /* Pods-Blubble-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		00599B9E33BDF7ECBAE7F594714EAEE9 /* Pods-BlubbleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2063EABAEEFB5516AD11C3152A04DA5A /* Build configuration list for PBXNativeTarget "Pods-BlubbleTests" */;
+			buildPhases = (
+				1806C9710D0787599209F4B878250335 /* Sources */,
+				F0D39E13DF8184787DB51393AA210F3E /* Frameworks */,
+				DA4DCE658275401582E8EA84D4F519E2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BlubbleTests";
+			productName = "Pods-BlubbleTests";
+			productReference = EB776E61E3B22AE75FBEEB3D7AD761D1 /* Pods_BlubbleTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4FB43CA9606CA6ED2332FEBB0D5BEB52 /* Pods-BlubbleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64280D074ED5FADF728E467F4BB2A236 /* Build configuration list for PBXNativeTarget "Pods-BlubbleUITests" */;
+			buildPhases = (
+				F21BECE3BA04A32742D5B75E78D3AA46 /* Sources */,
+				3CA73EF45743408985D703888596A2DD /* Frameworks */,
+				A063406ADA6447D5D7917F99F08FFE8E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BlubbleUITests";
+			productName = "Pods-BlubbleUITests";
+			productReference = 040BAB999EADB9C22816B504531E4890 /* Pods_BlubbleUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BA3E08B07947E9E41109918401FD5935 /* Pods-Blubble */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BE2626DCEF872E9F18FFA191BE537D0 /* Build configuration list for PBXNativeTarget "Pods-Blubble" */;
+			buildPhases = (
+				DC12C7511AD7BF05EC6815921DE1AD58 /* Sources */,
+				9A6DD72E3789B0EF5D16C3447C40443D /* Frameworks */,
+				E7F86D200DD52B5B299F47101E354F9B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				184DC6656CB352BDCC2AD5C603CBF881 /* PBXTargetDependency */,
+			);
+			name = "Pods-Blubble";
+			productName = "Pods-Blubble";
+			productReference = 3999F8BF3E40DA1C4D22F19A2B992C47 /* Pods_Blubble.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D8881D3FBB64115FDE9E51FB4EF87258 /* SwiftyGif */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52FD31BD2666605A84962A20604FBF8A /* Build configuration list for PBXNativeTarget "SwiftyGif" */;
+			buildPhases = (
+				A50EC14F8816C3E75F515F19663477BF /* Sources */,
+				4E5BAACCB214740609CA57746D4729D1 /* Frameworks */,
+				20D5E483142486F7BA035AEB60A0F7D2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyGif;
+			productName = SwiftyGif;
+			productReference = FDDC30F1BBF1F19DCE32B403E53D23B6 /* SwiftyGif.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 2FF5D676B93CAAB34B22828FA1FEAE60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA3E08B07947E9E41109918401FD5935 /* Pods-Blubble */,
+				00599B9E33BDF7ECBAE7F594714EAEE9 /* Pods-BlubbleTests */,
+				4FB43CA9606CA6ED2332FEBB0D5BEB52 /* Pods-BlubbleUITests */,
+				D8881D3FBB64115FDE9E51FB4EF87258 /* SwiftyGif */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1806C9710D0787599209F4B878250335 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A99902336514C16C82C1F3ACDE31CC0 /* Pods-BlubbleTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A50EC14F8816C3E75F515F19663477BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54D70BB02CE14F06C4AD20B70563EEC2 /* Info.plist in Sources */,
+				2877A8F0C3DB8BAA77ED8F9A8F85199A /* SwiftyGif-dummy.m in Sources */,
+				C66484FFEF4A4BCC5C209B32B9225539 /* SwiftyGifManager.swift in Sources */,
+				778745FFFDD200F4A6A6A1CD93A084D4 /* UIImage+SwiftyGif.swift in Sources */,
+				BBF2CB8C4E72930AA434121601C87834 /* UIImageView+SwiftyGif.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC12C7511AD7BF05EC6815921DE1AD58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D7D8C58AA4DB509C5EAD77FB2CAE459 /* Pods-Blubble-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F21BECE3BA04A32742D5B75E78D3AA46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3EF0DE9607A05FE0AF74C306B8D691D /* Pods-BlubbleUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		184DC6656CB352BDCC2AD5C603CBF881 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyGif;
+			target = D8881D3FBB64115FDE9E51FB4EF87258 /* SwiftyGif */;
+			targetProxy = EE5FAC96936A2D066E3A3D202561816A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		230B5B4FAB683D2BECE3A1FD9E1BAADF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7BC6F138C1793B4F2CD48AB21BB6FC8 /* Pods-BlubbleTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BlubbleTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BlubbleTests/Pods-BlubbleTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BlubbleTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		23F4279367E5328FB0FAC850D0066EC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77599DC5F67291CFD242D3A5D6FB7E71 /* SwiftyGif.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyGif/SwiftyGif-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyGif/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyGif/SwiftyGif.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyGif;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		27387869705B7667F4BAB2A49A8E0CBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38449126738B598A35CD39E51F241B3E /* Pods-Blubble.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Blubble/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Blubble/Pods-Blubble.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Blubble;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		366820251074BB408E035325EBEE2438 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 154ECDEDA403686D5F826866AD803DE3 /* Pods-BlubbleTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BlubbleTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BlubbleTests/Pods-BlubbleTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BlubbleTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		594CC9400B420AD456EDD71CBDC46E2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 427F3F4B9398C942F1A6996C824BE772 /* Pods-Blubble.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Blubble/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Blubble/Pods-Blubble.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Blubble;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6BC0C076929AF1EBBE7C04B259226F3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E3B76AC1980628A246DF33678E8C2D1 /* Pods-BlubbleUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BlubbleUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BlubbleUITests/Pods-BlubbleUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BlubbleUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		97803B46811A9BDB5E70FA1303AFBFFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BDD0139D6EB93FA375F887ABD62DAB2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3B5D7A03B761DDD8EA30EA782B6C104 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77599DC5F67291CFD242D3A5D6FB7E71 /* SwiftyGif.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyGif/SwiftyGif-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyGif/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyGif/SwiftyGif.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyGif;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D353070774FF901D107D6BCA70DE80A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C7F3E4D265A834BEBF8CEEB570F9C93 /* Pods-BlubbleUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BlubbleUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BlubbleUITests/Pods-BlubbleUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BlubbleUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2063EABAEEFB5516AD11C3152A04DA5A /* Build configuration list for PBXNativeTarget "Pods-BlubbleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				230B5B4FAB683D2BECE3A1FD9E1BAADF /* Debug */,
+				366820251074BB408E035325EBEE2438 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BE2626DCEF872E9F18FFA191BE537D0 /* Build configuration list for PBXNativeTarget "Pods-Blubble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27387869705B7667F4BAB2A49A8E0CBD /* Debug */,
+				594CC9400B420AD456EDD71CBDC46E2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97803B46811A9BDB5E70FA1303AFBFFE /* Debug */,
+				BDD0139D6EB93FA375F887ABD62DAB2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52FD31BD2666605A84962A20604FBF8A /* Build configuration list for PBXNativeTarget "SwiftyGif" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23F4279367E5328FB0FAC850D0066EC4 /* Debug */,
+				C3B5D7A03B761DDD8EA30EA782B6C104 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64280D074ED5FADF728E467F4BB2A236 /* Build configuration list for PBXNativeTarget "Pods-BlubbleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BC0C076929AF1EBBE7C04B259226F3D /* Debug */,
+				D353070774FF901D107D6BCA70DE80A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

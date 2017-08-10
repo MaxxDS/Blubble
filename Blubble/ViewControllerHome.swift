@@ -60,12 +60,12 @@ class ViewControllerHome: UIViewController {
         instructionsLabel.layer.masksToBounds = true
         instructionsLabel.layer.backgroundColor  = UIColor.white.cgColor
         instructionsLabel.layer.cornerRadius = 5
-        instructionsLabel.layer.borderWidth = 0
+        instructionsLabel.layer.borderWidth = 1
         instructionsLabel.layer.borderColor = UIColor.white.cgColor
 
         rateButton.layer.cornerRadius = 5
-       rateButton.layer.borderWidth = 1
-       rateButton.layer.borderColor = UIColor.white.cgColor
+        rateButton.layer.borderWidth = 1
+        rateButton.layer.borderColor = UIColor.white.cgColor
         
         
         self.navigationController?.navigationBar.titleTextAttributes =
