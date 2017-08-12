@@ -14,6 +14,7 @@ import Bolts
 
 class ViewControllerHome: UIViewController {
 
+    @IBOutlet var segmentedControl: UISegmentedControl!
 
     @IBOutlet var instructionsLabel: UILabel!
     
@@ -21,7 +22,12 @@ class ViewControllerHome: UIViewController {
     
     @IBAction func buttonPlayPressed(_ sender: Any) {
         print (" bouton play pressed")
-        
+        if segmentedControl.selectedSegmentIndex == 0 {
+        self.performSegue(withIdentifier: "Start1PlayerMode", sender: nil)
+        }
+        else if segmentedControl.selectedSegmentIndex == 1 {
+        self.performSegue(withIdentifier: "Start2PlayersMode", sender: nil)
+        }
     }
     
     @IBOutlet var rateButton: UIButton!

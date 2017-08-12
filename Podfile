@@ -5,6 +5,8 @@ target 'Blubble' do
 
 pod 'SwiftyGif', '3.1.0'
 
+pod 'SwiftGifOrigin', '~> 1.6.1'
+
   # Pods for Blubble
 
   target 'BlubbleTests' do

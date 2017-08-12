@@ -24,29 +24,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0c6-r9-rJ0">
-                                <rect key="frame" x="102" y="248" width="171" height="171"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="0c6-r9-rJ0" secondAttribute="height" multiplier="1:1" id="5yj-dX-viu"/>
-                                </constraints>
-                                <state key="normal" image="icon-video-overlay-play"/>
-                                <connections>
-                                    <action selector="buttonPlayPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sUk-M0-2fR"/>
-                                    <segue destination="9aD-iR-vhW" kind="show" id="Tdz-Yi-Vis"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLUBBLE " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="51" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w5T-Dg-lKU">
-                                <rect key="frame" x="5" y="20" width="365" height="195"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-HeavyItalic" family="Avenir Next Condensed" pointSize="101"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TheBlubbleFix" translatesAutoresizingMaskIntoConstraints="NO" id="oS0-bw-bAG" userLabel="TheBlubbleFix">
+                                <rect key="frame" x="-20" y="223" width="417" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xE-uD-yXK">
                                 <rect key="frame" x="4.5" y="542" width="366" height="94"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="Instructions: Appuyer alternativement sur le bouton gauche et le bouton droit pour faire grossir la bulle !!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k1g-NR-d6C">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="Instructions: Appuyer alternativement sur le bouton gauche et le bouton droit pour faire grossir la bulle !!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k1g-NR-d6C">
                                         <rect key="frame" x="0.0" y="0.0" width="305" height="94"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -54,7 +39,7 @@
                                             <constraint firstAttribute="height" constant="94" id="MDk-j3-0c6"/>
                                         </constraints>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBoldItalic" family="Avenir Next Condensed" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -85,17 +70,47 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLUBBLE " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="51" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w5T-Dg-lKU">
+                                <rect key="frame" x="5" y="20" width="365" height="195"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-HeavyItalic" family="Avenir Next Condensed" pointSize="101"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0c6-r9-rJ0">
+                                <rect key="frame" x="102" y="248" width="171" height="171"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0c6-r9-rJ0" secondAttribute="height" multiplier="1:1" id="5yj-dX-viu"/>
+                                </constraints>
+                                <state key="normal" image="icon-video-overlay-play"/>
+                                <connections>
+                                    <action selector="buttonPlayPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sUk-M0-2fR"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8HQ-uS-5Vl">
+                                <rect key="frame" x="102" y="447" width="171" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <segments>
+                                    <segment title="1 player"/>
+                                    <segment title="2 players"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0c6-r9-rJ0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8Yv-G0-9K6"/>
                             <constraint firstAttribute="trailing" secondItem="w5T-Dg-lKU" secondAttribute="trailing" constant="5" id="OcB-lF-u9j"/>
+                            <constraint firstItem="8HQ-uS-5Vl" firstAttribute="top" secondItem="0c6-r9-rJ0" secondAttribute="bottom" constant="28" id="Piq-kT-Dhu"/>
                             <constraint firstItem="w5T-Dg-lKU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rqk-Z2-epE"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4xE-uD-yXK" secondAttribute="bottom" constant="31" id="YqM-Uo-4g0"/>
                             <constraint firstItem="0c6-r9-rJ0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="228" id="ZHt-K5-YAu"/>
                             <constraint firstItem="4xE-uD-yXK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c5f-cv-DFe"/>
                             <constraint firstItem="w5T-Dg-lKU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="dpo-Kh-NX6"/>
                             <constraint firstItem="0c6-r9-rJ0" firstAttribute="top" secondItem="w5T-Dg-lKU" secondAttribute="bottom" constant="33" id="fa8-cK-cOI"/>
+                            <constraint firstItem="8HQ-uS-5Vl" firstAttribute="width" secondItem="0c6-r9-rJ0" secondAttribute="width" id="hQZ-bC-rfF"/>
+                            <constraint firstItem="8HQ-uS-5Vl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lCt-KF-Mzt"/>
                             <constraint firstItem="0c6-r9-rJ0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mUh-XQ-tny"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4xE-uD-yXK" secondAttribute="trailing" constant="-11.5" id="mz7-r8-7dt"/>
                             <constraint firstItem="w5T-Dg-lKU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xjK-QJ-qdz"/>
@@ -107,11 +122,109 @@
                         <outlet property="buttonPlay" destination="0c6-r9-rJ0" id="rTm-pZ-aQM"/>
                         <outlet property="instructionsLabel" destination="k1g-NR-d6C" id="3JK-5V-rYm"/>
                         <outlet property="rateButton" destination="JQI-F2-AOU" id="BoO-EA-YE3"/>
+                        <outlet property="segmentedControl" destination="8HQ-uS-5Vl" id="a7i-vE-4sq"/>
+                        <segue destination="9aD-iR-vhW" kind="show" identifier="Start1PlayerMode" id="aew-MO-fa2"/>
+                        <segue destination="gf9-3J-15h" kind="show" identifier="Start2PlayersMode" id="cOl-IJ-LKl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-148" y="138.98050974512745"/>
+        </scene>
+        <!--View Controller Play Ground2 Players-->
+        <scene sceneID="L5j-fr-C3N">
+            <objects>
+                <viewController id="gf9-3J-15h" customClass="ViewControllerPlayGround2Players" customModule="Blubble" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lfl-ON-qcA"/>
+                        <viewControllerLayoutGuide type="bottom" id="8zN-zT-YtX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mtv-9y-kjz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezV-bG-1wx">
+                                <rect key="frame" x="327" y="342" width="48" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-MediumItalic" family="Avenir Next Condensed" pointSize="17"/>
+                                <state key="normal" title="Retour">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="t7P-VC-7HF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niq-eX-NPH">
+                                <rect key="frame" x="0.0" y="306" width="92" height="55"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-HeavyItalic" family="Avenir Next Condensed" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5L-aL-ET5">
+                                <rect key="frame" x="338" y="300" width="37" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KP8-uN-xmP"/>
+                                    <constraint firstAttribute="width" secondItem="B5L-aL-ET5" secondAttribute="height" multiplier="1:1" constant="-3" id="r23-ZX-Ofo"/>
+                                </constraints>
+                                <state key="normal" image="Command-Reset"/>
+                                <connections>
+                                    <action selector="replayButtonPressed:" destination="9aD-iR-vhW" eventType="touchUpInside" id="SLG-GO-TsM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zz1-Wk-UBu">
+                                <rect key="frame" x="23" y="567" width="58" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JE5-Dr-2a0">
+                                <rect key="frame" x="299" y="568" width="60" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEQ-iZ-FI9">
+                                <rect key="frame" x="16" y="20" width="65" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGV-QS-nFA">
+                                <rect key="frame" x="299" y="20" width="60" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iny-IH-Pcd">
+                                <rect key="frame" x="67" y="107" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hb0-v9-G2g">
+                                <rect key="frame" x="67" y="408" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B5L-aL-ET5" firstAttribute="trailing" secondItem="mtv-9y-kjz" secondAttribute="trailingMargin" constant="16" id="Gnu-NC-x32"/>
+                            <constraint firstItem="B5L-aL-ET5" firstAttribute="centerY" secondItem="mtv-9y-kjz" secondAttribute="centerY" constant="-13.5" id="Icl-z8-AjE"/>
+                            <constraint firstItem="niq-eX-NPH" firstAttribute="centerY" secondItem="mtv-9y-kjz" secondAttribute="centerY" id="euI-me-xdM"/>
+                            <constraint firstItem="niq-eX-NPH" firstAttribute="leading" secondItem="mtv-9y-kjz" secondAttribute="leading" id="jPs-Qi-cHK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="RetourButton" destination="ezV-bG-1wx" id="Ny0-aG-W3e"/>
+                        <outlet property="buttonLeft1" destination="Zz1-Wk-UBu" id="uBc-Ay-8cF"/>
+                        <outlet property="buttonLeft2" destination="eEQ-iZ-FI9" id="UTZ-Bg-Kb1"/>
+                        <outlet property="buttonRight1" destination="JE5-Dr-2a0" id="Znb-MD-7Kq"/>
+                        <outlet property="buttonRight2" destination="xGV-QS-nFA" id="ZWQ-zh-b7y"/>
+                        <outlet property="countDownLabel" destination="niq-eX-NPH" id="sdS-aa-ZQR"/>
+                        <outlet property="imageView1" destination="Hb0-v9-G2g" id="gad-vE-HFe"/>
+                        <outlet property="imageView2" destination="Iny-IH-Pcd" id="5Hz-fb-bao"/>
+                        <outlet property="replayButton" destination="B5L-aL-ET5" id="obR-7E-Iil"/>
+                        <outlet property="retourButton" destination="ezV-bG-1wx" id="RCu-TE-8Hh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jbg-id-Ccu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="648.79999999999995" y="618.44077961019491"/>
         </scene>
         <!--View Controller Play Ground-->
         <scene sceneID="PEP-zc-4OM">
@@ -242,12 +355,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWO-sE-gZV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="632.79999999999995" y="-623.83808095952031"/>
+            <point key="canvasLocation" x="662" y="-214"/>
         </scene>
     </scenes>
     <resources>
         <image name="Command-Reset" width="256" height="256"/>
+        <image name="TheBlubbleFix" width="681" height="379"/>
         <image name="home-7" width="30" height="30"/>
         <image name="icon-video-overlay-play" width="600" height="600"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="t7P-VC-7HF"/>
+    </inferredMetricsTieBreakers>
 </document>
