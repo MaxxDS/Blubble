@@ -38,11 +38,11 @@ class ViewControllerInstructions: UIViewController {
     }
     
     func initUI(){
-        retourButton.layer.masksToBounds = true
-        retourButton.layer.backgroundColor  = UIColor.black.cgColor
-        retourButton.layer.cornerRadius = 5
-        retourButton.layer.borderWidth = 1
-        retourButton.layer.borderColor = UIColor.white.cgColor
+//        retourButton.layer.masksToBounds = true
+//        retourButton.layer.backgroundColor  = UIColor.black.cgColor
+//        retourButton.layer.cornerRadius = 5
+//        retourButton.layer.borderWidth = 1
+//        retourButton.layer.borderColor = UIColor.white.cgColor
         
 
        retourButton.titleLabel?.adjustsFontSizeToFitWidth = true

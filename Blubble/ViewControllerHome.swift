@@ -9,14 +9,14 @@
 import UIKit
 import Parse
 import Bolts
+import GameKit
 
 
 
-class ViewControllerHome: UIViewController {
+class ViewControllerHome: UIViewController, GKGameCenterControllerDelegate {
+
 
     @IBOutlet var segmentedControl: UISegmentedControl!
-
-    @IBOutlet var instructionsLabel: UILabel!
     
     @IBOutlet var buttonPlay: UIButton!
     
@@ -41,6 +41,13 @@ class ViewControllerHome: UIViewController {
         }
         
     }
+    
+    @IBOutlet var showLeaderButton: UIButton!
+    
+    @IBAction func showLeaderButtonPressed(_ sender: Any) {
+        showLeader()
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,6 +57,10 @@ class ViewControllerHome: UIViewController {
     
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        authenticateLocalPlayer()
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,17 +77,12 @@ class ViewControllerHome: UIViewController {
         
         buttonPlay.backgroundColor = .clear
         
-        instructionsLabel.layer.masksToBounds = true
-        instructionsLabel.layer.backgroundColor  = UIColor.white.cgColor
-        instructionsLabel.layer.cornerRadius = 5
-        instructionsLabel.layer.borderWidth = 1
-        instructionsLabel.layer.borderColor = UIColor.white.cgColor
 
-        rateButton.layer.cornerRadius = 5
-        rateButton.layer.borderWidth = 1
-        rateButton.layer.borderColor = UIColor.white.cgColor
-        rateButton.titleLabel?.textAlignment = .center
-        
+//        rateButton.layer.cornerRadius = 5
+//        rateButton.layer.borderWidth = 1
+//        rateButton.layer.borderColor = UIColor.white.cgColor
+//        rateButton.titleLabel?.textAlignment = .center
+//        
         
         self.navigationController?.navigationBar.titleTextAttributes =
             [NSForegroundColorAttributeName: UIColor.white,
@@ -114,5 +120,39 @@ class ViewControllerHome: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //initiate gamecenter
+    func authenticateLocalPlayer(){
+        
+        let localPlayer = GKLocalPlayer.localPlayer()
+        
+        localPlayer.authenticateHandler = {(viewController, error) -> Void in
+            
+            if (viewController != nil) {
+                self.present(viewController!, animated: true, completion: nil)
+            }
+                
+            else {
+                print((GKLocalPlayer.localPlayer().isAuthenticated))
+            }
+        }
+        
+    }
+    
+    
+    //shows leaderboard screen
+    func showLeader() {
+        _ = self.view?.window?.rootViewController
+        let gc = GKGameCenterViewController()
+        gc.gameCenterDelegate = self
+        self.present(gc, animated: true, completion: nil)
+    }
+    
+    //hides leaderboard screen
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController)
+    {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
+        
+    }
 
 }

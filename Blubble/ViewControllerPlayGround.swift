@@ -47,6 +47,8 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
     
     let gif = UIImage(gifName: "TheBlubble.gif")
     
+    let fingerPrint = UIImage(named: "Fingerprint")
+    
     var score : Int = 0
     
     var count = 0
@@ -60,9 +62,9 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
     @IBOutlet var buttonLeft: UIButton!
     
     @IBAction func buttonLeftPressed(_ sender: Any) {
-        if buttonLeft.backgroundColor == UIColor.myGreenColor() {
-            buttonLeft.backgroundColor = UIColor.white
-            buttonRight.backgroundColor = UIColor.myGreenColor()
+        if buttonLeft.backgroundColor == UIColor.white{
+            buttonLeft.backgroundColor = UIColor.black
+            buttonRight.backgroundColor = UIColor.white
             
         }
     }
@@ -71,9 +73,10 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
     @IBOutlet var buttonRight: UIButton!
     
     @IBAction func buttonRightPressed(_ sender: Any) {
-        if (buttonLeft.backgroundColor == UIColor.white) {
-            buttonRight.backgroundColor = UIColor.white
-            buttonLeft.backgroundColor = UIColor.myGreenColor()
+        if (buttonLeft.backgroundColor == UIColor.black) {
+            buttonRight.backgroundColor = UIColor.black
+            buttonLeft.backgroundColor = UIColor.white
+            
             score += 1
             
             //            JpgView.frame.size.width = JpgView.frame.size.width * 1.025
@@ -146,13 +149,14 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
         buttonLeft.layer.cornerRadius = 10
         buttonLeft.layer.borderWidth = 3
         buttonLeft.layer.borderColor = UIColor.white.cgColor
-        buttonLeft.backgroundColor = UIColor.myGreenColor()
+        buttonLeft.backgroundColor = UIColor.white
+//        buttonLeft.setBackgroundImage(#imageLiteral(resourceName: "Fingerprint"), for: [])
         
         buttonRight.backgroundColor = .clear
         buttonRight.layer.cornerRadius = 10
         buttonRight.layer.borderWidth = 3
         buttonRight.layer.borderColor = UIColor.white.cgColor
-        buttonRight.backgroundColor = UIColor.myGreenColor()
+//        buttonRight.setBackgroundImage(#imageLiteral(resourceName: "Fingerprint"), for: [])
         
         //        JpgView.isHidden = false
         //        GifView.isHidden = false
@@ -330,16 +334,16 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
 //extension UIImage {
 //    internal class func delayForImageAtIndex(_ index: Int, source: CGImageSource!) -> Double {
 //        var delay = 0.001
-//        
+//
 //        // Get dictionaries
 //        let cfProperties = CGImageSourceCopyPropertiesAtIndex(source, index, nil)
 //        let gifPropertiesPointer = UnsafeMutablePointer<UnsafeRawPointer?>.allocate(capacity: 0)
 //        if CFDictionaryGetValueIfPresent(cfProperties, Unmanaged.passUnretained(kCGImagePropertyGIFDictionary).toOpaque(), gifPropertiesPointer) == false {
 //            return delay
 //        }
-//        
+//
 //        let gifProperties:CFDictionary = unsafeBitCast(gifPropertiesPointer.pointee, to: CFDictionary.self)
-//        
+//
 //        // Get delay time
 //        var delayObject: AnyObject = unsafeBitCast(
 //            CFDictionaryGetValue(gifProperties,
@@ -349,14 +353,14 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
 //            delayObject = unsafeBitCast(CFDictionaryGetValue(gifProperties,
 //                                                             Unmanaged.passUnretained(kCGImagePropertyGIFDelayTime).toOpaque()), to: AnyObject.self)
 //        }
-//        
+//
 //        delay = delayObject as? Double ?? 0
-//        
+//
 //        if delay < 0.001 {
 //            delay = 0.001 // Make sure they're not too fast
 //        }
-//        
+//
 //        return delay
 //    }
-//    
+//
 //}
