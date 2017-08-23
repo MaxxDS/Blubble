@@ -21,8 +21,7 @@ class ViewControllerPlayGround2Players: UIViewController
     
     @IBOutlet var countDownLabel: UILabel!
     
-    @IBOutlet var scoreLabel2: UILabel!
-    @IBOutlet var scoreLabel1: UILabel!
+
     
     @IBOutlet var replayButton: UIButton!
     
@@ -80,7 +79,7 @@ class ViewControllerPlayGround2Players: UIViewController
             imageView1.frame.size.height = imageView1.frame.size.height * 1.025
             imageView1.center.x = self.view.center.x
             //            imageView.center.y = self.view.center.y
-            scoreLabel1.text = ("\(score1)")
+      
         }
     }
     
@@ -94,7 +93,7 @@ class ViewControllerPlayGround2Players: UIViewController
             imageView2.frame.size.height = imageView2.frame.size.height * 1.025
             imageView2.center.x = self.view.center.x
             //            imageView.center.y = self.view.center.y
-            scoreLabel2.text = ("\(score2)")
+       
         }
     }
     
@@ -141,29 +140,47 @@ class ViewControllerPlayGround2Players: UIViewController
         
         countDownLabel.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
         
-        scoreLabel2.transform = CGAffineTransform(rotationAngle: -CGFloat.pi)
-        
+  
         
         
         //        replayButton.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
         
         
         //
-        //        self.imageView.setGifImage(gif, manager: gifManager, loopCount: 1)
-        //
-        //        view.addSubview(imageView)
-        //
-        //        buttonLeft.backgroundColor = .clear
-        //        buttonLeft.layer.cornerRadius = 10
-        //        buttonLeft.layer.borderWidth = 3
-        //        buttonLeft.layer.borderColor = UIColor.white.cgColor
-        //        buttonLeft.backgroundColor = UIColor.myGreenColor()
-        //
-        //        buttonRight.backgroundColor = .clear
-        //        buttonRight.layer.cornerRadius = 10
-        //        buttonRight.layer.borderWidth = 3
-        //        buttonRight.layer.borderColor = UIColor.white.cgColor
-        //        buttonRight.backgroundColor = UIColor.myGreenColor()
+                self.imageView1.setGifImage(gif, manager: gifManager, loopCount: 1)
+        
+                view.addSubview(imageView1)
+        
+        self.imageView2.setGifImage(gif, manager: gifManager, loopCount: 1)
+        
+        view.addSubview(imageView2)
+        
+                buttonLeft1.backgroundColor = .clear
+                buttonLeft1.layer.cornerRadius = 10
+                buttonLeft1.layer.borderWidth = 3
+                buttonLeft1.layer.borderColor = UIColor.white.cgColor
+                buttonLeft1.backgroundColor = UIColor.myGreenColor()
+        
+        buttonLeft2.backgroundColor = .clear
+        buttonLeft2.layer.cornerRadius = 10
+        buttonLeft2.layer.borderWidth = 3
+        buttonLeft2.layer.borderColor = UIColor.white.cgColor
+        buttonLeft2.backgroundColor = UIColor.myGreenColor()
+        
+                buttonRight1.backgroundColor = .clear
+                buttonRight1.layer.cornerRadius = 10
+                buttonRight1.layer.borderWidth = 3
+                buttonRight1.layer.borderColor = UIColor.white.cgColor
+                buttonRight1.backgroundColor = UIColor.myGreenColor()
+        
+        
+        buttonRight2.backgroundColor = .clear
+        buttonRight2.layer.cornerRadius = 10
+        buttonRight2.layer.borderWidth = 3
+        buttonRight2.layer.borderColor = UIColor.white.cgColor
+        buttonRight2.backgroundColor = UIColor.myGreenColor()
+        
+        
         //
         //        //        JpgView.isHidden = false
         //        //        GifView.isHidden = false

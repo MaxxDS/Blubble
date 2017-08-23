@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,31 +21,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLUBBLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="39" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i4a-21-DtE">
-                                <rect key="frame" x="58" y="236" width="259" height="170"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-HeavyItalic" family="Avenir Next Condensed" pointSize="78"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bulle" translatesAutoresizingMaskIntoConstraints="NO" id="Zm4-Ye-y4s">
-                                <rect key="frame" x="28" y="173" width="319" height="336"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Zm4-Ye-y4s" secondAttribute="height" multiplier="319:336" id="G6R-Or-FZZ"/>
-                                </constraints>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qBx-M3-sxT">
+                                <rect key="frame" x="-153" y="85.5" width="681" height="496"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TheBlubbleFix" translatesAutoresizingMaskIntoConstraints="NO" id="RDD-eo-d5T">
+                                        <rect key="frame" x="0.0" y="0.0" width="681" height="389"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="RDD-eo-d5T" secondAttribute="height" multiplier="14:8" id="5Vy-AC-igu"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLUBBLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="39" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i4a-21-DtE">
+                                        <rect key="frame" x="197" y="389" width="287" height="107"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-HeavyItalic" family="Avenir Next Condensed" pointSize="78"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="i4a-21-DtE" secondAttribute="bottom" constant="261" id="6Fy-wm-wda"/>
-                            <constraint firstItem="Zm4-Ye-y4s" firstAttribute="trailing" secondItem="i4a-21-DtE" secondAttribute="trailing" constant="30" id="GhV-4R-dLZ"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Zm4-Ye-y4s" secondAttribute="bottom" constant="158" id="SNn-ak-6Lt"/>
-                            <constraint firstItem="Zm4-Ye-y4s" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Uml-lt-dSF"/>
-                            <constraint firstItem="i4a-21-DtE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="g1W-3T-2Es"/>
-                            <constraint firstItem="i4a-21-DtE" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="216" id="keV-5l-7ZO"/>
-                            <constraint firstItem="Zm4-Ye-y4s" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="153" id="lzq-Ta-g2D"/>
-                            <constraint firstItem="i4a-21-DtE" firstAttribute="leading" secondItem="Zm4-Ye-y4s" secondAttribute="leading" constant="30" id="mf7-E0-Taz"/>
+                            <constraint firstItem="qBx-M3-sxT" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="3Fe-m1-G3h"/>
+                            <constraint firstItem="qBx-M3-sxT" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="5vC-HP-WC2"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -55,6 +54,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bulle" width="313" height="313"/>
+        <image name="TheBlubbleFix" width="681" height="379"/>
     </resources>
 </document>

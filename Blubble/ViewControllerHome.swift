@@ -32,6 +32,9 @@ class ViewControllerHome: UIViewController {
     
     @IBOutlet var rateButton: UIButton!
     
+    @IBOutlet var instructionButton: UIButton!
+    
+    
     @IBAction func rateButtonPressed(_ sender: Any) {
         rateApp(appId: "id1234984538") { success in
             print("RateApp \(success)")
@@ -72,6 +75,7 @@ class ViewControllerHome: UIViewController {
         rateButton.layer.cornerRadius = 5
         rateButton.layer.borderWidth = 1
         rateButton.layer.borderColor = UIColor.white.cgColor
+        rateButton.titleLabel?.textAlignment = .center
         
         
         self.navigationController?.navigationBar.titleTextAttributes =
