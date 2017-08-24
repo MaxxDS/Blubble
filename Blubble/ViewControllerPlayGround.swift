@@ -39,7 +39,7 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
     
     @IBOutlet var replayButton: UIButton!
     
-    @IBOutlet var Label: UILabel!
+    //    @IBOutlet var Label: UILabel!
     
     @IBOutlet var imageView: UIImageView!
     
@@ -51,13 +51,20 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
     
     var score : Int = 0
     
+    var totalTime = 0
+    
     var count = 0
     
     var countGameOver = 0
     
     var timer : Timer? = nil
     
-    var timerGameOver : Timer? = nil
+    let screenSize: CGRect = UIScreen.main.bounds
+    
+  
+    
+//    var timerGameOver : Timer? = nil
+    
     
     @IBOutlet var buttonLeft: UIButton!
     
@@ -89,8 +96,8 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
             //            GifView.center.x = self.view.center.x
             //            GifView.center.y = self.view.center.y
             
-            imageView.frame.size.width = imageView.frame.size.width * 1.025
-            imageView.frame.size.height = imageView.frame.size.height * 1.025
+            imageView.frame.size.width = imageView.frame.size.width * 1.021
+            imageView.frame.size.height = imageView.frame.size.height * 1.021
             imageView.center.x = self.view.center.x
             imageView.center.y = self.view.center.y
             
@@ -106,8 +113,9 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
         initData()
         initUI()
         restartGame()
+        startTimeFormat()
         
-        countDownLabel.text = "\(count)"
+        
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewControllerPlayGround.update), userInfo: nil, repeats: true)
         
         //        timerGameOver = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewControllerPlayGround.update1), userInfo: nil, repeats: true)
@@ -118,8 +126,9 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
         super.viewDidLoad()
         initData()
         initUI()
+        startTimeFormat ()
+        //        countDownLabel.text = "0:\(count)"
         
-        countDownLabel.text = "\(count)"
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewControllerPlayGround.update), userInfo: nil, repeats: true)
         
@@ -143,20 +152,20 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
         
         self.imageView.setGifImage(gif, manager: gifManager, loopCount: 1)
         
-        view.addSubview(imageView)
+//        view.addSubview(imageView)
         
         buttonLeft.backgroundColor = .clear
         buttonLeft.layer.cornerRadius = 10
         buttonLeft.layer.borderWidth = 3
         buttonLeft.layer.borderColor = UIColor.white.cgColor
         buttonLeft.backgroundColor = UIColor.white
-//        buttonLeft.setBackgroundImage(#imageLiteral(resourceName: "Fingerprint"), for: [])
+        //        buttonLeft.setBackgroundImage(#imageLiteral(resourceName: "Fingerprint"), for: [])
         
         buttonRight.backgroundColor = .clear
         buttonRight.layer.cornerRadius = 10
         buttonRight.layer.borderWidth = 3
         buttonRight.layer.borderColor = UIColor.white.cgColor
-//        buttonRight.setBackgroundImage(#imageLiteral(resourceName: "Fingerprint"), for: [])
+        //        buttonRight.setBackgroundImage(#imageLiteral(resourceName: "Fingerprint"), for: [])
         
         //        JpgView.isHidden = false
         //        GifView.isHidden = false
@@ -173,19 +182,24 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
         //
         //        GifView.loadGif(name: "BubbleBurst")
         
-        imageView.frame.size.width = 80
-        imageView.frame.size.height = 48
+//        imageView.frame = CGRect(x: 0, y: 0, width: 50, height: screenSize.height * 0.2)
+        
+       
+        imageView.frame.size.height = screenSize.height * 0.1
+        imageView.frame.size.width = imageView.frame.size.height * ( 23 / 13 )
         imageView.center.x = self.view.center.x
         imageView.center.y = self.view.center.y
-        
+       
         self.imageView.stopAnimatingGif()
         
     }
     
     
     func initData() {
-        count = 5
-        countGameOver = 6
+        totalTime = 10
+        count = totalTime - 1
+        
+        //        countGameOver = 6
         score = 0
         scoreLabel.text = ("\(score)")
         replayButton.isHidden = true
@@ -193,16 +207,39 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
         
     }
     
+//    func timeFormat () {
+//        if (count > 9) {
+//            countDownLabel.text = ("0:\(count) ")
+//        }
+//            
+//        else if (count > 0) {
+//            countDownLabel.text = ("0:0\(count) ")
+//        }
+//    }
     
+    func startTimeFormat () {
+        if (totalTime > 9) {
+            countDownLabel.text = ("0:\(totalTime) ")
+        }
+            
+        else if (count > 0) {
+            countDownLabel.text = ("0:0\(totalTime) ")
+        }
+    }
+    
+
     func update() {
         
-        if (count > 0) {
-            count -= 1
-            countDownLabel.text = (" \(count) ")
+        if (count > 9) {
+            countDownLabel.text = ("0:\(count) ")
+            count -= 1}
             
+        else if (count > 0) {
+            countDownLabel.text = ("0:0\(count) ")
+            count -= 1
         }
-        
-        if (count == 0){
+            
+        else if (count == 0){
             gameOver()
         }
         
@@ -254,8 +291,8 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
         //        GifView.center.x = self.view.center.x
         //        GifView.center.y = self.view.center.y
         
-        imageView.frame.size.width = 80
-        imageView.frame.size.height = 48
+        imageView.frame.size.height = screenSize.height * 0.1
+        imageView.frame.size.width = imageView.frame.size.height * ( 23 / 13 )
         imageView.center.x = self.view.center.x
         imageView.center.y = self.view.center.y
     }

@@ -329,6 +329,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BRR-IV-et9">
+                                <rect key="frame" x="131.5" y="302" width="112.5" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwM-Pc-Egy">
                                 <rect key="frame" x="16" y="533" width="100" height="120"/>
                                 <constraints>
@@ -350,20 +355,20 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRs-rF-nui">
-                                <rect key="frame" x="85.5" y="28" width="204" height="122"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-HeavyItalic" family="Avenir Next Condensed" pointSize="89"/>
+                                <rect key="frame" x="82.5" y="28" width="210" height="106.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="89"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="34" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EIx-9P-1Py">
                                 <rect key="frame" x="124" y="534" width="127" height="113"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-HeavyItalic" family="Avenir Next Condensed" pointSize="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="67"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rta-ig-iwt">
-                                <rect key="frame" x="159" y="534" width="57" height="21"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBoldItalic" family="Avenir Next Condensed" pointSize="25"/>
+                                <rect key="frame" x="152" y="534" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -379,8 +384,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzl-Jo-uKD">
-                                <rect key="frame" x="16" y="28" width="41" height="36"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-MediumItalic" family="Avenir Next Condensed" pointSize="17"/>
+                                <rect key="frame" x="16" y="28" width="51" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Retour">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -390,8 +395,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEa-3o-iBA">
-                                <rect key="frame" x="288" y="28" width="71" height="36"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-MediumItalic" family="Avenir Next Condensed" pointSize="17"/>
+                                <rect key="frame" x="269" y="28" width="90" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Classement">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -399,10 +404,6 @@
                                     <action selector="showLeaderButtonPressed:" destination="9aD-iR-vhW" eventType="touchUpInside" id="t9l-uU-cXL"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BRR-IV-et9">
-                                <rect key="frame" x="67" y="282" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -434,7 +435,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Label" destination="iRs-rF-nui" id="HOx-6g-lD4"/>
                         <outlet property="buttonLeft" destination="rwM-Pc-Egy" id="xIz-Xq-qlH"/>
                         <outlet property="buttonRight" destination="Xza-NR-sSe" id="MZl-Hc-dSQ"/>
                         <outlet property="countDownLabel" destination="iRs-rF-nui" id="Qhr-U2-4tl"/>
@@ -460,6 +460,6 @@
         <image name="iconRatingWhite" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2QY-i5-9CU"/>
+        <segue reference="YR1-5h-eQ1"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qBx-M3-sxT">
-                                <rect key="frame" x="-153" y="85.5" width="681" height="496"/>
+                                <rect key="frame" x="-153" y="92.5" width="681" height="482.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TheBlubbleFix" translatesAutoresizingMaskIntoConstraints="NO" id="RDD-eo-d5T">
                                         <rect key="frame" x="0.0" y="0.0" width="681" height="389"/>
@@ -30,9 +30,9 @@
                                             <constraint firstAttribute="width" secondItem="RDD-eo-d5T" secondAttribute="height" multiplier="14:8" id="5Vy-AC-igu"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLUBBLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="39" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i4a-21-DtE">
-                                        <rect key="frame" x="197" y="389" width="287" height="107"/>
-                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-HeavyItalic" family="Avenir Next Condensed" pointSize="78"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="blubble" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="39" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i4a-21-DtE">
+                                        <rect key="frame" x="215" y="389" width="251" height="93.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="78"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
