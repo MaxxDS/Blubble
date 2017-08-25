@@ -11,104 +11,86 @@ import Parse
 import Bolts
 import GameKit
 import SwiftyGif
+import SwiftGifOrigin
 
 
 class ViewControllerPlayGround2Players: UIViewController
 {
     
     @IBOutlet var retourButton: UIButton!
-    
-    
-    @IBOutlet var countDownLabel: UILabel!
-    
-
-    
     @IBOutlet var replayButton: UIButton!
-    
     @IBOutlet var imageView1: UIImageView!
-    
     @IBOutlet var imageView2: UIImageView!
-    
+    @IBOutlet var imageView: UIImageView!
     
     let gifManager = SwiftyGifManager(memoryLimit:20)
-    
     let gif = UIImage(gifName: "TheBlubble.gif")
+    let screenSize: CGRect = UIScreen.main.bounds
     
     var score1 : Int = 0
     var score2 : Int = 0
-    var count = 0
+    var scoreDiff : Int = 0
     
-    var countGameOver = 0
-    
-    var timer : Timer? = nil
-    
-    var timerGameOver : Timer? = nil
+    var distance : Int = 0
     
     @IBOutlet var buttonLeft1: UIButton!
     @IBOutlet var buttonRight1: UIButton!
     @IBOutlet var buttonLeft2: UIButton!
     @IBOutlet var buttonRight2: UIButton!
     
+    @IBOutlet var line1: UILabel!
+    @IBOutlet var line2: UILabel!
+//    @IBOutlet var line3: UILabel!
     
     @IBAction func buttonLeft1Pressed(_ sender: Any) {
-        if buttonLeft1.backgroundColor == UIColor.myGreenColor() {
-            buttonLeft1.backgroundColor = UIColor.white
-            buttonRight1.backgroundColor = UIColor.myGreenColor()
-            
+        if (buttonLeft1.backgroundColor == UIColor.white) {
+            buttonLeft1.backgroundColor = UIColor.black
+            buttonRight1.backgroundColor = UIColor.white
         }
     }
     
     
     
     @IBAction func buttonLeft2Pressed(_ sender: Any) {
-        if buttonLeft2.backgroundColor == UIColor.myGreenColor() {
-            buttonLeft2.backgroundColor = UIColor.white
-            buttonRight2.backgroundColor = UIColor.myGreenColor()
-            
+        if buttonLeft2.backgroundColor == UIColor.white {
+            buttonLeft2.backgroundColor = UIColor.black
+            buttonRight2.backgroundColor = UIColor.white
         }
     }
     
     
     
     @IBAction func buttonRight1Pressed(_ sender: Any) {
-        if (buttonLeft1.backgroundColor == UIColor.white) {
-            buttonRight1.backgroundColor = UIColor.white
-            buttonLeft1.backgroundColor = UIColor.myGreenColor()
+        if (buttonLeft1.backgroundColor == UIColor.black) {
+            buttonRight1.backgroundColor = UIColor.black
+            buttonLeft1.backgroundColor = UIColor.white
             score1 += 1
-            imageView1.frame.size.width = imageView1.frame.size.width * 1.025
-            imageView1.frame.size.height = imageView1.frame.size.height * 1.025
-            imageView1.center.x = self.view.center.x
-            //            imageView.center.y = self.view.center.y
-      
+            imageView.frame.origin.y = imageView.frame.origin.y-(screenSize.height * 0.01)
+            scoreDiff = score2-score1
+            scoreUpdate ()
         }
     }
     
     
     @IBAction func buttonRight2Pressed(_ sender: Any) {
-        if (buttonLeft2.backgroundColor == UIColor.white) {
-            buttonRight2.backgroundColor = UIColor.white
-            buttonLeft2.backgroundColor = UIColor.myGreenColor()
+        if (buttonLeft2.backgroundColor == UIColor.black) {
+            buttonRight2.backgroundColor = UIColor.black
+            buttonLeft2.backgroundColor = UIColor.white
             score2 += 1
-            imageView2.frame.size.width = imageView2.frame.size.width * 1.025
-            imageView2.frame.size.height = imageView2.frame.size.height * 1.025
-            imageView2.center.x = self.view.center.x
-            //            imageView.center.y = self.view.center.y
-       
+            imageView.frame.origin.y = imageView.frame.origin.y+(screenSize.height * 0.01)
+            scoreDiff = score2-score1
+            scoreUpdate ()
         }
     }
     
-
-        @IBAction func replayButtonPressed(_ sender: Any) {
     
-            initData()
-            initUI()
-            restartGame()
-    
-            countDownLabel.text = "\(count)"
-            
-            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewControllerPlayGround.update), userInfo: nil, repeats: true)
-
-        }
+    @IBAction func replayButtonPressed(_ sender: Any) {
+        
+        initData()
+        initUI()
+        restartGame()
+        
+    }
     
     
     
@@ -116,262 +98,122 @@ class ViewControllerPlayGround2Players: UIViewController
         super.viewDidLoad()
         initData()
         initUI()
-        
-                countDownLabel.text = "\(count)"
-        
-                timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewControllerPlayGround.update), userInfo: nil, repeats: true)
     }
-
-        //    override func viewDidAppear(_ animated: Bool) {
-        //        authenticateLocalPlayer()
-        //    }
-        //
-        //    // Do any additional setup after loading the view.
-        //
-        //
-        //    override func didReceiveMemoryWarning() {
-        //        super.didReceiveMemoryWarning()
-        //        // Dispose of any resources that can be recreated.
-
+    
     
     func initUI() {
         
-        //        retourButton.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
-        
-        countDownLabel.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
-        
-  
-        
-        
-        //        replayButton.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
-        
-        
-        //
-                self.imageView1.setGifImage(gif, manager: gifManager, loopCount: 1)
-        
-                view.addSubview(imageView1)
-        
+        self.imageView1.setGifImage(gif, manager: gifManager, loopCount: 1)
         self.imageView2.setGifImage(gif, manager: gifManager, loopCount: 1)
+        self.imageView1.stopAnimatingGif()
+        self.imageView2.stopAnimatingGif()
+        //        view.addSubview(imageView)
         
-        view.addSubview(imageView2)
+        imageView.frame.size.height = screenSize.height * 0.15
+        imageView.frame.size.width = imageView1.frame.size.height * ( 129 / 182 )
+        imageView.center.x = self.view.center.x
+        imageView.center.y = self.view.center.y
         
-                buttonLeft1.backgroundColor = .clear
-                buttonLeft1.layer.cornerRadius = 10
-                buttonLeft1.layer.borderWidth = 3
-                buttonLeft1.layer.borderColor = UIColor.white.cgColor
-                buttonLeft1.backgroundColor = UIColor.myGreenColor()
+        buttonLeft1.backgroundColor = .clear
+        buttonLeft1.layer.cornerRadius = 10
+        buttonLeft1.layer.borderWidth = 3
+        buttonLeft1.layer.borderColor = UIColor.white.cgColor
+        buttonLeft1.backgroundColor = UIColor.white
+        //        buttonLeft.setBackgroundImage(#imageLiteral(resourceName: "Fingerprint"), for: [])
+        
+        buttonRight1.backgroundColor = .clear
+        buttonRight1.layer.cornerRadius = 10
+        buttonRight1.layer.borderWidth = 3
+        buttonRight1.layer.borderColor = UIColor.white.cgColor
+        //        buttonRight.setBackgroundImage(#imageLiteral(resourceName: "Fingerprint"), for: [])
         
         buttonLeft2.backgroundColor = .clear
         buttonLeft2.layer.cornerRadius = 10
         buttonLeft2.layer.borderWidth = 3
         buttonLeft2.layer.borderColor = UIColor.white.cgColor
-        buttonLeft2.backgroundColor = UIColor.myGreenColor()
-        
-                buttonRight1.backgroundColor = .clear
-                buttonRight1.layer.cornerRadius = 10
-                buttonRight1.layer.borderWidth = 3
-                buttonRight1.layer.borderColor = UIColor.white.cgColor
-                buttonRight1.backgroundColor = UIColor.myGreenColor()
-        
+        buttonLeft2.backgroundColor = UIColor.white
+        //        buttonLeft.setBackgroundImage(#imageLiteral(resourceName: "Fingerprint"), for: [])
         
         buttonRight2.backgroundColor = .clear
         buttonRight2.layer.cornerRadius = 10
         buttonRight2.layer.borderWidth = 3
         buttonRight2.layer.borderColor = UIColor.white.cgColor
-        buttonRight2.backgroundColor = UIColor.myGreenColor()
+        //        buttonRight.setBackgroundImage(#imageLiteral(resourceName: "Fingerprint"), for: [])
+        
+//        line1.layer.borderColor = UIColor.white.cgColor
+//        line2.layer.borderColor = UIColor.white.cgColor
+        
+        line1.frame.origin.x = (screenSize.width / 2 ) - 15 - line1.frame.width
+        line1.frame.origin.y = (screenSize.height / 2 )
+        line2.frame.origin.x = (screenSize.width / 2 ) + 15
+        line2.frame.origin.y = (screenSize.height / 2 )
         
         
-        //
-        //        //        JpgView.isHidden = false
-        //        //        GifView.isHidden = false
-        //        //
-        //                JpgView.frame.size.width = 80
-        //                JpgView.frame.size.height = 48
-        //                JpgView.center.x = self.view.center.x
-        //                JpgView.center.y = self.view.center.y
-        ////        //
-        //        //        GifView.frame.size.width = 80
-        //        //        GifView.frame.size.height = 48
-        //        //        GifView.center.x = self.view.center.x
-        //        //        GifView.center.y = self.view.center.y
-        //        //
-        //        //        GifView.loadGif(name: "BubbleBurst")
-        //
-        //        imageView.frame.size.width = 80
-        //        imageView.frame.size.height = 48
-        //        imageView.center.x = self.view.center.x
-        //        imageView.center.y = self.view.center.y
-        //
-        //        self.imageView.stopAnimatingGif()
-        //
+//        line3.frame.origin.x = screenSize.width/2
+//        line3.frame.origin.y = 0
+//        line3.frame.size.width = 1
+//        line3.frame.size.height = screenSize.height
+//        line3.backgroundColor = UIColor.white
+//        line3.layer.borderColor = UIColor.white.cgColor
+        
+        
+//        imageView1.frame.size.height = screenSize.height * 0.25
+//        imageView1.frame.size.width = imageView1.frame.size.height * ( 23 / 13 )
+//        imageView1.center.x = self.view.center.x
+//        NSLayoutConstraint(item: imageView1, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.bottom, multiplier: 1.0, constant: 0.0).isActive = true
+        imageView1.transform = imageView1.transform.rotated(by: CGFloat(Double.pi/2))
+        
+        
+//        imageView2.frame.size.height = screenSize.height * 0.25
+//        imageView2.frame.size.width = imageView2.frame.size.height * ( 23 / 13 )
+//        imageView2.center.x = self.view.center.x
+//        NSLayoutConstraint(item: imageView2, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.top, multiplier: 1.0, constant: 0.0).isActive = true
+       imageView2.transform = imageView2.transform.rotated(by: CGFloat(Double.pi*(3/2)))
+        scoreDiff = 0
     }
-    //
-    //
+
     func initData() {
-        //        count = 5
-        //        countGameOver = 6
-        //        score = 0
-        //        scoreLabel.text = ("\(score)")
-        //        replayButton.isHidden = true
-        //
-        
+        replayButton.isHidden = true
     }
-    //
-    //
-    //    func update() {
-    //
-    //        if (count > 0) {
-    //            count -= 1
-    //            countDownLabel.text = (" \(count) ")
-    //
-    //        }
-    //
-    //        if (count == 0){
-    //            gameOver()
-    //        }
-    //
-    //    }
-    //
-    //    //    func update1() {
-    //    //        if (countGameOver > 0) {
-    //    //            countGameOver -= 1
-    //    //
-    //    //
-    //    //        }
-    //    //
-    //    //        if (countGameOver == 0){
-    //    //            GifView.isHidden = true
-    //    //        }
-    //    //
-    //    //    }
-    //
-    //    func gameOver () {
-    //        timer?.invalidate()
-    //        timer = nil
-    //        countDownLabel.isHidden = true
-    //        replayButton.isHidden = false
-    //        buttonLeft.isEnabled = false
-    //        buttonRight.isEnabled = false
-    //        //        JpgView.isHidden = true
-    //        //        GifView.isHidden = false
-    //        saveHighscore(score: score)
-    //        self.imageView.startAnimatingGif()
-    //
-    //    }
-    //
-        func restartGame () {
-            timer = nil
-            countDownLabel.isHidden = false
-            replayButton.isHidden = true
-            buttonLeft1.isEnabled = true
-            buttonRight1.isEnabled = true
-            buttonLeft2.isEnabled = true
-            buttonRight2.isEnabled = true
     
-            initUI()
+    
+    func scoreUpdate () {
+        if scoreDiff == 18 {
+            player2Wins()
         }
-    //
-    //
-    //    //initiate gamecenter
-    //    func authenticateLocalPlayer(){
-    //
-    //        let localPlayer = GKLocalPlayer.localPlayer()
-    //
-    //        localPlayer.authenticateHandler = {(viewController, error) -> Void in
-    //
-    //            if (viewController != nil) {
-    //                self.present(viewController!, animated: true, completion: nil)
-    //            }
-    //
-    //            else {
-    //                print((GKLocalPlayer.localPlayer().isAuthenticated))
-    //            }
-    //        }
-    //
-    //    }
-    //
-    //
-    //    //shows leaderboard screen
-    //    func showLeader() {
-    //        _ = self.view?.window?.rootViewController
-    //        let gc = GKGameCenterViewController()
-    //        gc.gameCenterDelegate = self
-    //        self.present(gc, animated: true, completion: nil)
-    //    }
-    //
-    //    //hides leaderboard screen
-    //    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController)
-    //    {
-    //        gameCenterViewController.dismiss(animated: true, completion: nil)
-    //
-    //    }
-    //
-    //    //send high score to leaderboard
-    //    func saveHighscore(score:Int) {
-    //
-    //        //check if user is signed in
-    //        if GKLocalPlayer.localPlayer().isAuthenticated {
-    //
-    //            let scoreReporter = GKScore(leaderboardIdentifier: "LesPlusGrossesBlubbles") //leaderboard id here
-    //
-    //            scoreReporter.value = Int64(score) //score variable here (same as above)
-    //
-    //            let scoreArray: [GKScore] = [scoreReporter]
-    //
-    //            GKScore.report(scoreArray, withCompletionHandler: { (error) in
-    //                if error != nil {
-    //                    print("error")
-    //                }
-    //            })
-    //
-    //
-    //
-    //        }
-    //    }
-    //
-    //
-    //    /*
-    //     // MARK: - Navigation
-    //
-    //     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    //     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //     // Get the new view controller using segue.destinationViewController.
-    //     // Pass the selected object to the new view controller.
-    //     }
-    //     */
-    //
+        if scoreDiff == -18 {
+            player1Wins()
+        }
+    }
+    
+    
+    func restartGame () {
+        replayButton.isHidden = true
+        buttonLeft1.isEnabled = true
+        buttonRight1.isEnabled = true
+        buttonLeft2.isEnabled = true
+        buttonRight2.isEnabled = true
+        initUI()
+    }
+    
+    func player1Wins () {
+        replayButton.isHidden = false
+        buttonLeft1.isEnabled = false
+        buttonRight1.isEnabled = false
+        buttonLeft2.isEnabled = false
+        buttonRight2.isEnabled = false
+
+        self.imageView2.startAnimatingGif()
+    }
+    
+    func player2Wins () {
+        replayButton.isHidden = false
+        buttonLeft1.isEnabled = false
+        buttonRight1.isEnabled = false
+        buttonLeft2.isEnabled = false
+        buttonRight2.isEnabled = false
+        
+        self.imageView1.startAnimatingGif()
+    }
+    
 }
-//
-//extension UIImage {
-//    internal class func delayForImageAtIndex(_ index: Int, source: CGImageSource!) -> Double {
-//        var delay = 0.001
-//
-//        // Get dictionaries
-//        let cfProperties = CGImageSourceCopyPropertiesAtIndex(source, index, nil)
-//        let gifPropertiesPointer = UnsafeMutablePointer<UnsafeRawPointer?>.allocate(capacity: 0)
-//        if CFDictionaryGetValueIfPresent(cfProperties, Unmanaged.passUnretained(kCGImagePropertyGIFDictionary).toOpaque(), gifPropertiesPointer) == false {
-//            return delay
-//        }
-//
-//        let gifProperties:CFDictionary = unsafeBitCast(gifPropertiesPointer.pointee, to: CFDictionary.self)
-//
-//        // Get delay time
-//        var delayObject: AnyObject = unsafeBitCast(
-//            CFDictionaryGetValue(gifProperties,
-//                                 Unmanaged.passUnretained(kCGImagePropertyGIFUnclampedDelayTime).toOpaque()),
-//            to: AnyObject.self)
-//        if delayObject.doubleValue == 0 {
-//            delayObject = unsafeBitCast(CFDictionaryGetValue(gifProperties,
-//                                                             Unmanaged.passUnretained(kCGImagePropertyGIFDelayTime).toOpaque()), to: AnyObject.self)
-//        }
-//
-//        delay = delayObject as? Double ?? 0
-//
-//        if delay < 0.001 {
-//            delay = 0.001 // Make sure they're not too fast
-//        }
-//
-//        return delay
-//    }
-//
-//}

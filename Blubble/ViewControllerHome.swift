@@ -15,7 +15,6 @@ import GameKit
 
 class ViewControllerHome: UIViewController, GKGameCenterControllerDelegate {
 
-
     @IBOutlet var segmentedControl: UISegmentedControl!
     
     @IBOutlet var buttonPlay: UIButton!
