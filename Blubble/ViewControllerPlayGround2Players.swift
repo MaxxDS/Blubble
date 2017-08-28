@@ -16,6 +16,7 @@ import SwiftGifOrigin
 
 class ViewControllerPlayGround2Players: UIViewController
 {
+//    @IBOutlet var stackView: UIStackView!
     
     @IBOutlet var retourButton: UIButton!
     @IBOutlet var replayButton: UIButton!
@@ -27,11 +28,23 @@ class ViewControllerPlayGround2Players: UIViewController
     let gif = UIImage(gifName: "TheBlubble.gif")
     let screenSize: CGRect = UIScreen.main.bounds
     
+    var screenSizeHeight = UIScreen.main.bounds.height
+    var screenSizeHeightInt = 0
     var score1 : Int = 0
     var score2 : Int = 0
     var scoreDiff : Int = 0
-    
     var distance : Int = 0
+    var timer : Timer? = nil
+    var timeCount : Int = 0
+    var nombreDeCoupsPourGagner : Int = 0
+    var nombreDeCoupsCGFloat : CGFloat = 0.0
+    
+    
+//    @IBOutlet var stackView: UIStackView!
+//    @IBOutlet var score1ToWin: UILabel!
+    @IBOutlet var score2ToWin: UILabel!
+//    @IBOutlet var scoreLabel1: UILabel!
+    @IBOutlet var scoreLabel2: UILabel!
     
     @IBOutlet var buttonLeft1: UIButton!
     @IBOutlet var buttonRight1: UIButton!
@@ -40,32 +53,41 @@ class ViewControllerPlayGround2Players: UIViewController
     
     @IBOutlet var line1: UILabel!
     @IBOutlet var line2: UILabel!
-//    @IBOutlet var line3: UILabel!
+    @IBOutlet var line3: UILabel!
+    
+    @IBOutlet var player1Name: UILabel!
+
+//    @IBOutlet var PourGagner2: UILabel!
+//    @IBOutlet var PourGagner1: UILabel!
+//    @IBOutlet var Total1: UILabel!
+//    @IBOutlet var Total2: UILabel!
     
     @IBAction func buttonLeft1Pressed(_ sender: Any) {
-        if (buttonLeft1.backgroundColor == UIColor.white) {
-            buttonLeft1.backgroundColor = UIColor.black
-            buttonRight1.backgroundColor = UIColor.white
+        if (buttonLeft1.isEnabled == true) {
+            buttonLeft1.isEnabled = false
+            buttonRight1.isEnabled = true
         }
     }
     
     
     
     @IBAction func buttonLeft2Pressed(_ sender: Any) {
-        if buttonLeft2.backgroundColor == UIColor.white {
-            buttonLeft2.backgroundColor = UIColor.black
-            buttonRight2.backgroundColor = UIColor.white
+        if buttonLeft2.isEnabled == true {
+            buttonLeft2.isEnabled = false
+            buttonRight2.isEnabled = true
         }
     }
     
     
     
     @IBAction func buttonRight1Pressed(_ sender: Any) {
-        if (buttonLeft1.backgroundColor == UIColor.black) {
-            buttonRight1.backgroundColor = UIColor.black
-            buttonLeft1.backgroundColor = UIColor.white
-            score1 += 1
-            imageView.frame.origin.y = imageView.frame.origin.y-(screenSize.height * 0.01)
+        if (buttonLeft1.isEnabled == false) {
+            buttonRight1.isEnabled = false
+            buttonLeft1.isEnabled = true
+//            score1 += 1
+//            scoreLabel1.text = "\(score1)"
+            imageView.frame.origin.y = imageView.frame.origin.y - screenSize.height * (1/18) /*nombreDeCoupsCGFloat*/ * (18/100)
+            print ("\(nombreDeCoupsCGFloat)")
             scoreDiff = score2-score1
             scoreUpdate ()
         }
@@ -73,11 +95,12 @@ class ViewControllerPlayGround2Players: UIViewController
     
     
     @IBAction func buttonRight2Pressed(_ sender: Any) {
-        if (buttonLeft2.backgroundColor == UIColor.black) {
-            buttonRight2.backgroundColor = UIColor.black
-            buttonLeft2.backgroundColor = UIColor.white
+        if (buttonLeft2.isEnabled == false) {
+            buttonRight2.isEnabled = false
+            buttonLeft2.isEnabled = true
             score2 += 1
-            imageView.frame.origin.y = imageView.frame.origin.y+(screenSize.height * 0.01)
+            scoreLabel2.text = "\(score2)"
+            imageView.frame.origin.y = imageView.frame.origin.y + screenSize.height * (1/18) /*nombreDeCoupsCGFloat*/ * (18/100)
             scoreDiff = score2-score1
             scoreUpdate ()
         }
@@ -89,6 +112,7 @@ class ViewControllerPlayGround2Players: UIViewController
         initData()
         initUI()
         restartGame()
+        timer = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(ViewControllerPlayGround2Players.update), userInfo: nil, repeats: true)
         
     }
     
@@ -98,6 +122,7 @@ class ViewControllerPlayGround2Players: UIViewController
         super.viewDidLoad()
         initData()
         initUI()
+        timer = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(ViewControllerPlayGround2Players.update), userInfo: nil, repeats: true)
     }
     
     
@@ -114,66 +139,83 @@ class ViewControllerPlayGround2Players: UIViewController
         imageView.center.x = self.view.center.x
         imageView.center.y = self.view.center.y
         
-        buttonLeft1.backgroundColor = .clear
-        buttonLeft1.layer.cornerRadius = 10
-        buttonLeft1.layer.borderWidth = 3
-        buttonLeft1.layer.borderColor = UIColor.white.cgColor
-        buttonLeft1.backgroundColor = UIColor.white
-        //        buttonLeft.setBackgroundImage(#imageLiteral(resourceName: "Fingerprint"), for: [])
-        
-        buttonRight1.backgroundColor = .clear
-        buttonRight1.layer.cornerRadius = 10
-        buttonRight1.layer.borderWidth = 3
-        buttonRight1.layer.borderColor = UIColor.white.cgColor
-        //        buttonRight.setBackgroundImage(#imageLiteral(resourceName: "Fingerprint"), for: [])
-        
-        buttonLeft2.backgroundColor = .clear
-        buttonLeft2.layer.cornerRadius = 10
-        buttonLeft2.layer.borderWidth = 3
-        buttonLeft2.layer.borderColor = UIColor.white.cgColor
-        buttonLeft2.backgroundColor = UIColor.white
-        //        buttonLeft.setBackgroundImage(#imageLiteral(resourceName: "Fingerprint"), for: [])
-        
-        buttonRight2.backgroundColor = .clear
-        buttonRight2.layer.cornerRadius = 10
-        buttonRight2.layer.borderWidth = 3
-        buttonRight2.layer.borderColor = UIColor.white.cgColor
-        //        buttonRight.setBackgroundImage(#imageLiteral(resourceName: "Fingerprint"), for: [])
-        
-//        line1.layer.borderColor = UIColor.white.cgColor
-//        line2.layer.borderColor = UIColor.white.cgColor
-        
-        line1.frame.origin.x = (screenSize.width / 2 ) - 15 - line1.frame.width
+        buttonLeft1.backgroundColor = UIColor.black
+
+        buttonRight1.backgroundColor = UIColor.black
+
+        buttonLeft2.backgroundColor = UIColor.black
+
+        buttonRight2.backgroundColor = UIColor.black
+
+        line1.frame.origin.x = 0
         line1.frame.origin.y = (screenSize.height / 2 )
+        line1.frame.size.width = (screenSize.width / 2 ) - 15
+        
         line2.frame.origin.x = (screenSize.width / 2 ) + 15
         line2.frame.origin.y = (screenSize.height / 2 )
+        line2.frame.size.width = (screenSize.width / 2 ) - 15
         
+        line3.frame.origin.x = screenSize.width/2
+        line3.frame.origin.y = 0
+        line3.frame.size.width = 1
+        line3.frame.size.height = screenSize.height
+        line3.backgroundColor = UIColor.white
+        line3.layer.borderColor = UIColor.white.cgColor
         
-//        line3.frame.origin.x = screenSize.width/2
-//        line3.frame.origin.y = 0
-//        line3.frame.size.width = 1
-//        line3.frame.size.height = screenSize.height
-//        line3.backgroundColor = UIColor.white
-//        line3.layer.borderColor = UIColor.white.cgColor
+
+//        scoreLabel2.transform = scoreLabel2.transform.rotated(by: CGFloat(Double.pi))
         
+//        score2ToWin.transform = score2ToWin.transform.rotated(by: CGFloat(Double.pi))
         
-//        imageView1.frame.size.height = screenSize.height * 0.25
-//        imageView1.frame.size.width = imageView1.frame.size.height * ( 23 / 13 )
-//        imageView1.center.x = self.view.center.x
-//        NSLayoutConstraint(item: imageView1, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.bottom, multiplier: 1.0, constant: 0.0).isActive = true
+//        PourGagner2.transform = scoreLabel2.transform.rotated(by: CGFloat(Double.pi))
+        
+//        Total2.transform = score2ToWin.transform.rotated(by: CGFloat(Double.pi))
+        
+//        stackView.transform = stackView.transform.rotated(by: CGFloat(Double.pi))
+        
         imageView1.transform = imageView1.transform.rotated(by: CGFloat(Double.pi/2))
         
+
+        imageView2.transform = imageView2.transform.rotated(by: CGFloat(Double.pi*(3/2)))
         
-//        imageView2.frame.size.height = screenSize.height * 0.25
-//        imageView2.frame.size.width = imageView2.frame.size.height * ( 23 / 13 )
-//        imageView2.center.x = self.view.center.x
-//        NSLayoutConstraint(item: imageView2, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.top, multiplier: 1.0, constant: 0.0).isActive = true
-       imageView2.transform = imageView2.transform.rotated(by: CGFloat(Double.pi*(3/2)))
+        
         scoreDiff = 0
     }
-
+    
     func initData() {
-        replayButton.isHidden = true
+        replayButton.isHidden = false
+        timeCount = 1
+//        scoreLabel1.text = "\(score1)"
+        scoreLabel2.text = "\(score2)"
+//        score1ToWin.text = "\(nombreDeCoupsPourGagner-scoreDiff)"
+//        score2ToWin.text = "\(nombreDeCoupsPourGagner+scoreDiff)"
+        screenSizeHeightInt = Int(screenSizeHeight)
+        nombreDeCoupsCGFloat = CGFloat(nombreDeCoupsPourGagner)
+        
+    }
+    
+    func update() {
+        
+        if (timeCount > 0) {
+            timeCount -= 1
+        }
+            
+        else if (timeCount == 0){
+            timeOver()
+        }
+        
+    }
+    
+    
+    func timeOver () {
+        timer?.invalidate()
+        timer = nil
+        line3.isHidden = true
+        //        line4.isHidden = true
+        
+        //        JpgView.isHidden = true
+        //        GifView.isHidden = false
+        
     }
     
     
@@ -188,11 +230,14 @@ class ViewControllerPlayGround2Players: UIViewController
     
     
     func restartGame () {
-        replayButton.isHidden = true
+        replayButton.isHidden = false
         buttonLeft1.isEnabled = true
         buttonRight1.isEnabled = true
         buttonLeft2.isEnabled = true
         buttonRight2.isEnabled = true
+        score1 = 0
+        score2 = 0
+        scoreDiff = 0
         initUI()
     }
     
@@ -202,7 +247,7 @@ class ViewControllerPlayGround2Players: UIViewController
         buttonRight1.isEnabled = false
         buttonLeft2.isEnabled = false
         buttonRight2.isEnabled = false
-
+        
         self.imageView2.startAnimatingGif()
     }
     

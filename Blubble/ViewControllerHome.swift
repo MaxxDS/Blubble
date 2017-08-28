@@ -34,6 +34,7 @@ class ViewControllerHome: UIViewController, GKGameCenterControllerDelegate {
     @IBOutlet var instructionButton: UIButton!
     
     
+
     @IBAction func rateButtonPressed(_ sender: Any) {
         rateApp(appId: "id1234984538") { success in
             print("RateApp \(success)")

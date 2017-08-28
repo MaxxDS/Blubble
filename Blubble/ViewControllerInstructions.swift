@@ -11,11 +11,16 @@ import UIKit
 
 
 
-class ViewControllerInstructions: UIViewController {
+class ViewControllerInstructions: UIViewController, UITextFieldDelegate {
     
 
     @IBOutlet var retourButton: UIButton!
     @IBOutlet var instructionsLabel: UILabel!
+    @IBOutlet var diffDePointsPourGagner: UITextField!
+    var points : Int = 18
+    var inputText : String = ""
+    var input = 0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +39,7 @@ class ViewControllerInstructions: UIViewController {
     }
     
     func initData (){
-        
+        diffDePointsPourGagner.text = "\(points)"
     }
     
     func initUI(){
@@ -49,7 +54,14 @@ class ViewControllerInstructions: UIViewController {
         retourButton.titleLabel?.baselineAdjustment = .alignCenters
     }
 
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        inputText = self.diffDePointsPourGagner.text!
+        input = Int(inputText)!
+        
+        
+        textField.resignFirstResponder()
+        return true;
+    }
     
     /*
      // MARK: - Navigation
