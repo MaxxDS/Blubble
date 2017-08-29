@@ -11,6 +11,7 @@
 		7B5F2E5A22EF536A8839F781 /* Pods_Blubble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADBA5E08BBE3A9E6A9FC4A7 /* Pods_Blubble.framework */; };
 		DE867E4CF4D524331B57CA6F /* Pods_BlubbleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E2ADA158854F0BE9D1A083 /* Pods_BlubbleTests.framework */; };
 		F008D4A81F3853EF0065E821 /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008D4A71F3853EF0065E821 /* GIF.swift */; };
+		F01A63811F54CE8E00E7B264 /* ViewControllerEnter2PlayersMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A63801F54CE8E00E7B264 /* ViewControllerEnter2PlayersMode.swift */; };
 		F06923001EC0CFE9003B8C8B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06922FE1EC0CFE9003B8C8B /* Bolts.framework */; };
 		F06923011EC0CFE9003B8C8B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06922FF1EC0CFE9003B8C8B /* Parse.framework */; };
 		F06923031EC0D03C003B8C8B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06923021EC0D03C003B8C8B /* AudioToolbox.framework */; };
@@ -67,6 +68,7 @@
 		6D3591A57634949D9A428EC0 /* Pods-BlubbleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlubbleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlubbleTests/Pods-BlubbleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BADBA5E08BBE3A9E6A9FC4A7 /* Pods_Blubble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blubble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F008D4A71F3853EF0065E821 /* GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
+		F01A63801F54CE8E00E7B264 /* ViewControllerEnter2PlayersMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerEnter2PlayersMode.swift; sourceTree = "<group>"; };
 		F06922FE1EC0CFE9003B8C8B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		F06922FF1EC0CFE9003B8C8B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		F06923021EC0D03C003B8C8B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -254,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				F0E7F1DB1EBC733B00466B9B /* ViewControllerHome.swift */,
+				F01A63801F54CE8E00E7B264 /* ViewControllerEnter2PlayersMode.swift */,
 				F0D02DBB1F4D819700EBF3F3 /* ViewControllerInstructions.swift */,
 				F0E7F1DF1EBC91F400466B9B /* ViewControllerPlayGround.swift */,
 				F07567231F3DA3600032E7E6 /* ViewControllerPlayGround2Players.swift */,
@@ -604,6 +607,7 @@
 				F0E7F1DE1EBC781800466B9B /* Extension.swift in Sources */,
 				F0D02DBC1F4D819700EBF3F3 /* ViewControllerInstructions.swift in Sources */,
 				F0E7F1E01EBC91F400466B9B /* ViewControllerPlayGround.swift in Sources */,
+				F01A63811F54CE8E00E7B264 /* ViewControllerEnter2PlayersMode.swift in Sources */,
 				F07567241F3DA3600032E7E6 /* ViewControllerPlayGround2Players.swift in Sources */,
 				F0E7F1A81EBC710500466B9B /* AppDelegate.swift in Sources */,
 				F0E7F1DC1EBC733B00466B9B /* ViewControllerHome.swift in Sources */,

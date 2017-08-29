@@ -17,6 +17,7 @@ class ViewControllerHome: UIViewController, GKGameCenterControllerDelegate {
 
     @IBOutlet var segmentedControl: UISegmentedControl!
     
+
     @IBOutlet var buttonPlay: UIButton!
     
     @IBAction func buttonPlayPressed(_ sender: Any) {
@@ -33,7 +34,9 @@ class ViewControllerHome: UIViewController, GKGameCenterControllerDelegate {
     
     @IBOutlet var instructionButton: UIButton!
     
-    
+    @IBAction func instructionButtonPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "showInstructions", sender: nil)
+    }
 
     @IBAction func rateButtonPressed(_ sender: Any) {
         rateApp(appId: "id1234984538") { success in

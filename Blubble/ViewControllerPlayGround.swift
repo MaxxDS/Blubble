@@ -196,7 +196,7 @@ class ViewControllerPlayGround: UIViewController, GKGameCenterControllerDelegate
     
     
     func initData() {
-        totalTime = 10
+        totalTime = 20
         count = totalTime - 1
         
         //        countGameOver = 6

@@ -16,7 +16,7 @@ class ViewControllerInstructions: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var retourButton: UIButton!
     @IBOutlet var instructionsLabel: UILabel!
-    @IBOutlet var diffDePointsPourGagner: UITextField!
+
     var points : Int = 18
     var inputText : String = ""
     var input = 0
@@ -27,7 +27,7 @@ class ViewControllerInstructions: UIViewController, UITextFieldDelegate {
         
         
         initUI()
-        initData()
+
         
         
         // Do any additional setup after loading the view.
@@ -38,9 +38,7 @@ class ViewControllerInstructions: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func initData (){
-        diffDePointsPourGagner.text = "\(points)"
-    }
+
     
     func initUI(){
 //        retourButton.layer.masksToBounds = true
@@ -54,14 +52,6 @@ class ViewControllerInstructions: UIViewController, UITextFieldDelegate {
         retourButton.titleLabel?.baselineAdjustment = .alignCenters
     }
 
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        inputText = self.diffDePointsPourGagner.text!
-        input = Int(inputText)!
-        
-        
-        textField.resignFirstResponder()
-        return true;
-    }
     
     /*
      // MARK: - Navigation
