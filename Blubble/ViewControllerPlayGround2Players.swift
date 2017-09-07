@@ -19,7 +19,7 @@ class ViewControllerPlayGround2Players: UIViewController
     
     @IBOutlet var stackView: UIStackView!
     
-    @IBOutlet var gameBoardView: UIView!
+    @IBOutlet var gameBoardView2: UIView!
     @IBOutlet var gameBoardView1: UIView!
     
     @IBOutlet var retourButton: UIButton!
@@ -28,6 +28,9 @@ class ViewControllerPlayGround2Players: UIViewController
     @IBOutlet var imageView1: UIImageView!
     @IBOutlet var imageView2: UIImageView!
     @IBOutlet var imagePointe: UIImageView!
+    
+    @IBOutlet var totalLabel1: UILabel!
+    @IBOutlet var pourGagnerLabel1: UILabel!
     
     let gifManager = SwiftyGifManager(memoryLimit:20)
     let gif = UIImage(gifName: "TheBlubble.gif")
@@ -140,7 +143,7 @@ class ViewControllerPlayGround2Players: UIViewController
         initData()
         initUI()
         
-        gameBoardView.transform = gameBoardView.transform.rotated(by: CGFloat(Double.pi))
+        gameBoardView2.transform = gameBoardView2.transform.rotated(by: CGFloat(Double.pi))
         
         imageView1.transform = imageView1.transform.rotated(by: CGFloat(Double.pi/2))
         
