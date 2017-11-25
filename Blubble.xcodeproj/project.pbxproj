@@ -10,8 +10,7 @@
 		23C03F61588C80ADCF5BFD5C /* Pods_BlubbleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05158EF735F25563D54FA815 /* Pods_BlubbleUITests.framework */; };
 		7B5F2E5A22EF536A8839F781 /* Pods_Blubble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADBA5E08BBE3A9E6A9FC4A7 /* Pods_Blubble.framework */; };
 		DE867E4CF4D524331B57CA6F /* Pods_BlubbleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E2ADA158854F0BE9D1A083 /* Pods_BlubbleTests.framework */; };
-		F008D4A81F3853EF0065E821 /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008D4A71F3853EF0065E821 /* GIF.swift */; };
-		F01A63811F54CE8E00E7B264 /* ViewControllerEnter2PlayersMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A63801F54CE8E00E7B264 /* ViewControllerEnter2PlayersMode.swift */; };
+		F01A63811F54CE8E00E7B264 /* BBViewControllerEnter2PlayersMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A63801F54CE8E00E7B264 /* BBViewControllerEnter2PlayersMode.swift */; };
 		F06923001EC0CFE9003B8C8B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06922FE1EC0CFE9003B8C8B /* Bolts.framework */; };
 		F06923011EC0CFE9003B8C8B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06922FF1EC0CFE9003B8C8B /* Parse.framework */; };
 		F06923031EC0D03C003B8C8B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06923021EC0D03C003B8C8B /* AudioToolbox.framework */; };
@@ -24,20 +23,18 @@
 		F06923111EC0D0C2003B8C8B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06923101EC0D0C2003B8C8B /* SystemConfiguration.framework */; };
 		F06923131EC0D0D7003B8C8B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F06923121EC0D0D7003B8C8B /* libz.tbd */; };
 		F06923151EC0D0EC003B8C8B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F06923141EC0D0EC003B8C8B /* libsqlite3.tbd */; };
-		F075671C1F3C41670032E7E6 /* gifTest.gif in Resources */ = {isa = PBXBuildFile; fileRef = F075671B1F3C41670032E7E6 /* gifTest.gif */; };
-		F07567201F3C5FBE0032E7E6 /* BubbleBurst.gif in Resources */ = {isa = PBXBuildFile; fileRef = F075671F1F3C5FBE0032E7E6 /* BubbleBurst.gif */; };
-		F07567221F3C88430032E7E6 /* TheBlubble.gif in Resources */ = {isa = PBXBuildFile; fileRef = F07567211F3C88430032E7E6 /* TheBlubble.gif */; };
-		F07567241F3DA3600032E7E6 /* ViewControllerPlayGround2Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07567231F3DA3600032E7E6 /* ViewControllerPlayGround2Players.swift */; };
-		F0D02DBC1F4D819700EBF3F3 /* ViewControllerInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D02DBB1F4D819700EBF3F3 /* ViewControllerInstructions.swift */; };
+		F07567221F3C88430032E7E6 /* BBtheBlubble.gif in Resources */ = {isa = PBXBuildFile; fileRef = F07567211F3C88430032E7E6 /* BBtheBlubble.gif */; };
+		F07567241F3DA3600032E7E6 /* BBViewControllerPlayGround2Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07567231F3DA3600032E7E6 /* BBViewControllerPlayGround2Players.swift */; };
+		F0D02DBC1F4D819700EBF3F3 /* BBViewControllerInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D02DBB1F4D819700EBF3F3 /* BBViewControllerInstructions.swift */; };
 		F0E7F1A81EBC710500466B9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1A71EBC710500466B9B /* AppDelegate.swift */; };
 		F0E7F1AD1EBC710500466B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E7F1AB1EBC710500466B9B /* Main.storyboard */; };
 		F0E7F1AF1EBC710500466B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E7F1AE1EBC710500466B9B /* Assets.xcassets */; };
 		F0E7F1B21EBC710500466B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E7F1B01EBC710500466B9B /* LaunchScreen.storyboard */; };
 		F0E7F1BD1EBC710500466B9B /* BlubbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1BC1EBC710500466B9B /* BlubbleTests.swift */; };
 		F0E7F1C81EBC710500466B9B /* BlubbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1C71EBC710500466B9B /* BlubbleUITests.swift */; };
-		F0E7F1DC1EBC733B00466B9B /* ViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1DB1EBC733B00466B9B /* ViewControllerHome.swift */; };
-		F0E7F1DE1EBC781800466B9B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1DD1EBC781800466B9B /* Extension.swift */; };
-		F0E7F1E01EBC91F400466B9B /* ViewControllerPlayGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1DF1EBC91F400466B9B /* ViewControllerPlayGround.swift */; };
+		F0E7F1DC1EBC733B00466B9B /* BBViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1DB1EBC733B00466B9B /* BBViewControllerHome.swift */; };
+		F0E7F1DE1EBC781800466B9B /* BBExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1DD1EBC781800466B9B /* BBExtension.swift */; };
+		F0E7F1E01EBC91F400466B9B /* BBViewControllerPlayGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7F1DF1EBC91F400466B9B /* BBViewControllerPlayGround.swift */; };
 		F0F8E0311EC3A4EA00B209D2 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F8E0301EC3A4EA00B209D2 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,8 +64,7 @@
 		55AD952F1357E15FAD886B84 /* Pods-Blubble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blubble.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blubble/Pods-Blubble.release.xcconfig"; sourceTree = "<group>"; };
 		6D3591A57634949D9A428EC0 /* Pods-BlubbleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlubbleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlubbleTests/Pods-BlubbleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BADBA5E08BBE3A9E6A9FC4A7 /* Pods_Blubble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blubble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F008D4A71F3853EF0065E821 /* GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
-		F01A63801F54CE8E00E7B264 /* ViewControllerEnter2PlayersMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerEnter2PlayersMode.swift; sourceTree = "<group>"; };
+		F01A63801F54CE8E00E7B264 /* BBViewControllerEnter2PlayersMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBViewControllerEnter2PlayersMode.swift; sourceTree = "<group>"; };
 		F06922FE1EC0CFE9003B8C8B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		F06922FF1EC0CFE9003B8C8B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		F06923021EC0D03C003B8C8B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -81,11 +77,9 @@
 		F06923101EC0D0C2003B8C8B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F06923121EC0D0D7003B8C8B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F06923141EC0D0EC003B8C8B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		F075671B1F3C41670032E7E6 /* gifTest.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gifTest.gif; sourceTree = "<group>"; };
-		F075671F1F3C5FBE0032E7E6 /* BubbleBurst.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = BubbleBurst.gif; sourceTree = "<group>"; };
-		F07567211F3C88430032E7E6 /* TheBlubble.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = TheBlubble.gif; sourceTree = "<group>"; };
-		F07567231F3DA3600032E7E6 /* ViewControllerPlayGround2Players.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPlayGround2Players.swift; sourceTree = "<group>"; };
-		F0D02DBB1F4D819700EBF3F3 /* ViewControllerInstructions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerInstructions.swift; sourceTree = "<group>"; };
+		F07567211F3C88430032E7E6 /* BBtheBlubble.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = BBtheBlubble.gif; sourceTree = "<group>"; };
+		F07567231F3DA3600032E7E6 /* BBViewControllerPlayGround2Players.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBViewControllerPlayGround2Players.swift; sourceTree = "<group>"; };
+		F0D02DBB1F4D819700EBF3F3 /* BBViewControllerInstructions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBViewControllerInstructions.swift; sourceTree = "<group>"; };
 		F0E7F1A41EBC710500466B9B /* Blubble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blubble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E7F1A71EBC710500466B9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0E7F1AC1EBC710500466B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,9 +92,9 @@
 		F0E7F1C31EBC710500466B9B /* BlubbleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlubbleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E7F1C71EBC710500466B9B /* BlubbleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlubbleUITests.swift; sourceTree = "<group>"; };
 		F0E7F1C91EBC710500466B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F0E7F1DB1EBC733B00466B9B /* ViewControllerHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerHome.swift; sourceTree = "<group>"; };
-		F0E7F1DD1EBC781800466B9B /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		F0E7F1DF1EBC91F400466B9B /* ViewControllerPlayGround.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPlayGround.swift; sourceTree = "<group>"; };
+		F0E7F1DB1EBC733B00466B9B /* BBViewControllerHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBViewControllerHome.swift; sourceTree = "<group>"; };
+		F0E7F1DD1EBC781800466B9B /* BBExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBExtension.swift; sourceTree = "<group>"; };
+		F0E7F1DF1EBC91F400466B9B /* BBViewControllerPlayGround.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBViewControllerPlayGround.swift; sourceTree = "<group>"; };
 		F0F8E02F1EC3A4E100B209D2 /* Blubble.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blubble.entitlements; sourceTree = "<group>"; };
 		F0F8E0301EC3A4EA00B209D2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		F7E2ADA158854F0BE9D1A083 /* Pods_BlubbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlubbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +154,55 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F020C22D1FC8B381003AB047 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F0E7F1DB1EBC733B00466B9B /* BBViewControllerHome.swift */,
+				F01A63801F54CE8E00E7B264 /* BBViewControllerEnter2PlayersMode.swift */,
+				F0D02DBB1F4D819700EBF3F3 /* BBViewControllerInstructions.swift */,
+				F0E7F1DF1EBC91F400466B9B /* BBViewControllerPlayGround.swift */,
+				F07567231F3DA3600032E7E6 /* BBViewControllerPlayGround2Players.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F020C22E1FC8B382003AB047 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F0E7F1DD1EBC781800466B9B /* BBExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F020C22F1FC8B382003AB047 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		F020C2301FC8B382003AB047 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
+		F020C2321FC8B382003AB047 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F020C2331FC8B3D6003AB047 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F07567211F3C88430032E7E6 /* BBtheBlubble.gif */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		F06922FD1EC0CFA7003B8C8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,16 +224,6 @@
 				05158EF735F25563D54FA815 /* Pods_BlubbleUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F075671A1F3C39E10032E7E6 /* Gifs */ = {
-			isa = PBXGroup;
-			children = (
-				F075671B1F3C41670032E7E6 /* gifTest.gif */,
-				F07567211F3C88430032E7E6 /* TheBlubble.gif */,
-				F075671F1F3C5FBE0032E7E6 /* BubbleBurst.gif */,
-			);
-			name = Gifs;
 			sourceTree = "<group>";
 		};
 		F0E7F19B1EBC710500466B9B = {
@@ -221,15 +254,15 @@
 				F0F8E02F1EC3A4E100B209D2 /* Blubble.entitlements */,
 				F0E7F1A71EBC710500466B9B /* AppDelegate.swift */,
 				F0E7F1AB1EBC710500466B9B /* Main.storyboard */,
-				F075671A1F3C39E10032E7E6 /* Gifs */,
-				F0E7F1D51EBC721B00466B9B /* Controllers */,
-				F0E7F1D61EBC723F00466B9B /* Views */,
-				F0E7F1D81EBC725C00466B9B /* Modals */,
-				F0E7F1D91EBC727000466B9B /* Library */,
-				F0E7F1DA1EBC727E00466B9B /* Extensions */,
-				F0E7F1AE1EBC710500466B9B /* Assets.xcassets */,
 				F0E7F1B01EBC710500466B9B /* LaunchScreen.storyboard */,
+				F0E7F1AE1EBC710500466B9B /* Assets.xcassets */,
 				F0E7F1B31EBC710500466B9B /* Info.plist */,
+				F020C22D1FC8B381003AB047 /* Controllers */,
+				F020C2321FC8B382003AB047 /* Views */,
+				F020C22E1FC8B382003AB047 /* Extensions */,
+				F020C22F1FC8B382003AB047 /* Libraries */,
+				F020C2301FC8B382003AB047 /* Modals */,
+				F020C2331FC8B3D6003AB047 /* Resources */,
 			);
 			path = Blubble;
 			sourceTree = "<group>";
@@ -250,48 +283,6 @@
 				F0E7F1C91EBC710500466B9B /* Info.plist */,
 			);
 			path = BlubbleUITests;
-			sourceTree = "<group>";
-		};
-		F0E7F1D51EBC721B00466B9B /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				F0E7F1DB1EBC733B00466B9B /* ViewControllerHome.swift */,
-				F01A63801F54CE8E00E7B264 /* ViewControllerEnter2PlayersMode.swift */,
-				F0D02DBB1F4D819700EBF3F3 /* ViewControllerInstructions.swift */,
-				F0E7F1DF1EBC91F400466B9B /* ViewControllerPlayGround.swift */,
-				F07567231F3DA3600032E7E6 /* ViewControllerPlayGround2Players.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		F0E7F1D61EBC723F00466B9B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		F0E7F1D81EBC725C00466B9B /* Modals */ = {
-			isa = PBXGroup;
-			children = (
-				F008D4A71F3853EF0065E821 /* GIF.swift */,
-			);
-			name = Modals;
-			sourceTree = "<group>";
-		};
-		F0E7F1D91EBC727000466B9B /* Library */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Library;
-			sourceTree = "<group>";
-		};
-		F0E7F1DA1EBC727E00466B9B /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				F0E7F1DD1EBC781800466B9B /* Extension.swift */,
-			);
-			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,9 +415,7 @@
 				F0E7F1B21EBC710500466B9B /* LaunchScreen.storyboard in Resources */,
 				F0E7F1AF1EBC710500466B9B /* Assets.xcassets in Resources */,
 				F0E7F1AD1EBC710500466B9B /* Main.storyboard in Resources */,
-				F075671C1F3C41670032E7E6 /* gifTest.gif in Resources */,
-				F07567201F3C5FBE0032E7E6 /* BubbleBurst.gif in Resources */,
-				F07567221F3C88430032E7E6 /* TheBlubble.gif in Resources */,
+				F07567221F3C88430032E7E6 /* BBtheBlubble.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,14 +592,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F008D4A81F3853EF0065E821 /* GIF.swift in Sources */,
-				F0E7F1DE1EBC781800466B9B /* Extension.swift in Sources */,
-				F0D02DBC1F4D819700EBF3F3 /* ViewControllerInstructions.swift in Sources */,
-				F0E7F1E01EBC91F400466B9B /* ViewControllerPlayGround.swift in Sources */,
-				F01A63811F54CE8E00E7B264 /* ViewControllerEnter2PlayersMode.swift in Sources */,
-				F07567241F3DA3600032E7E6 /* ViewControllerPlayGround2Players.swift in Sources */,
+				F0E7F1DE1EBC781800466B9B /* BBExtension.swift in Sources */,
+				F0D02DBC1F4D819700EBF3F3 /* BBViewControllerInstructions.swift in Sources */,
+				F0E7F1E01EBC91F400466B9B /* BBViewControllerPlayGround.swift in Sources */,
+				F01A63811F54CE8E00E7B264 /* BBViewControllerEnter2PlayersMode.swift in Sources */,
+				F07567241F3DA3600032E7E6 /* BBViewControllerPlayGround2Players.swift in Sources */,
 				F0E7F1A81EBC710500466B9B /* AppDelegate.swift in Sources */,
-				F0E7F1DC1EBC733B00466B9B /* ViewControllerHome.swift in Sources */,
+				F0E7F1DC1EBC733B00466B9B /* BBViewControllerHome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

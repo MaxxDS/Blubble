@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -12,11 +13,16 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNextCondensed.ttc">
+            <string>AvenirNextCondensed-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewControllerHome" customModule="Blubble" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BBViewControllerHome" customModule="Blubble" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -26,24 +32,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aI-ZE-yZ7">
-                                <rect key="frame" x="275.5" y="113" width="44" height="44"/>
+                                <rect key="frame" x="275" y="113" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="85f-S3-DdD"/>
                                     <constraint firstAttribute="height" constant="44" id="Z61-EG-Jl5"/>
                                 </constraints>
                                 <state key="normal" image="iconInformation" backgroundImage="iconInformation"/>
                                 <connections>
-                                    <action selector="instructionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PiG-JW-YhZ"/>
+                                    <action selector="buttonInstructionsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PiG-JW-YhZ"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZg-1J-sIb">
-                                <rect key="frame" x="94" y="310" width="188" height="188"/>
+                                <rect key="frame" x="94" y="310" width="187.5" height="187.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TheBlubbleSquare" translatesAutoresizingMaskIntoConstraints="NO" id="4ob-dY-lhG">
-                                        <rect key="frame" x="0.0" y="0.0" width="188" height="188"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="187.5"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xey-4F-rzP">
-                                        <rect key="frame" x="0.0" y="0.0" width="188" height="188"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="187.5"/>
                                         <state key="normal" image="icon-video-overlay-play"/>
                                         <connections>
                                             <action selector="buttonPlayPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KUH-OP-9lZ"/>
@@ -64,7 +70,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="blubble" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="51" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w5T-Dg-lKU" userLabel="BLUBBLE">
-                                <rect key="frame" x="56.5" y="20" width="263" height="93"/>
+                                <rect key="frame" x="56.5" y="20" width="262.5" height="93"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="w5T-Dg-lKU" secondAttribute="height" multiplier="150:53" id="E98-Ub-S6Z"/>
                                 </constraints>
@@ -75,21 +81,21 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdH-c4-LhX">
-                                <rect key="frame" x="235.5" y="113" width="40" height="40"/>
+                                <rect key="frame" x="235" y="113" width="40" height="40"/>
                                 <state key="normal" image="iconRatingWhite"/>
                                 <connections>
-                                    <action selector="rateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="74k-sA-YOx"/>
+                                    <action selector="buttonRatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="74k-sA-YOx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9B-Zn-lOZ">
-                                <rect key="frame" x="191.5" y="110" width="44" height="45"/>
+                                <rect key="frame" x="191" y="110" width="44" height="45"/>
                                 <state key="normal" image="iconLeaderboard"/>
                                 <connections>
-                                    <action selector="showLeaderButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hc6-ue-hrl"/>
+                                    <action selector="buttonGameCenterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hc6-ue-hrl"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8HQ-uS-5Vl">
-                                <rect key="frame" x="118" y="535" width="139" height="29"/>
+                                <rect key="frame" x="118" y="534.5" width="139" height="29"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <segments>
                                     <segment title="1 player"/>
@@ -122,12 +128,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="home" image="home-7" id="Cfz-m7-Ji4"/>
                     <connections>
+                        <outlet property="buttonGameCenter" destination="v9B-Zn-lOZ" id="5Ws-dc-m5L"/>
+                        <outlet property="buttonInstructions" destination="2aI-ZE-yZ7" id="e63-Ft-FgD"/>
                         <outlet property="buttonPlay" destination="Xey-4F-rzP" id="UtI-b9-cj3"/>
-                        <outlet property="instructionButton" destination="2aI-ZE-yZ7" id="e63-Ft-FgD"/>
-                        <outlet property="rateButton" destination="EdH-c4-LhX" id="szD-2l-fws"/>
-                        <outlet property="segmentedControl" destination="8HQ-uS-5Vl" id="iy0-ro-nfx"/>
+                        <outlet property="buttonRate" destination="EdH-c4-LhX" id="szD-2l-fws"/>
+                        <outlet property="segmentedControl1PlayerOr2Players" destination="8HQ-uS-5Vl" id="iy0-ro-nfx"/>
                         <outlet property="settingsButton" destination="CP0-Em-oiU" id="JLb-G6-z3c"/>
-                        <outlet property="showLeaderButton" destination="v9B-Zn-lOZ" id="5Ws-dc-m5L"/>
                         <segue destination="9aD-iR-vhW" kind="show" identifier="Start1PlayerMode" id="aew-MO-fa2"/>
                         <segue destination="t1S-fK-ENd" kind="show" identifier="Start2PlayersMode" id="gOU-tK-Cp0"/>
                         <segue destination="fTJ-AP-fAP" kind="show" identifier="showInstructions" id="5eZ-Jk-arN"/>
@@ -140,7 +146,7 @@
         <!--View Controller Instructions-->
         <scene sceneID="HGV-UE-aDo">
             <objects>
-                <viewController id="fTJ-AP-fAP" customClass="ViewControllerInstructions" customModule="Blubble" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fTJ-AP-fAP" customClass="BBViewControllerInstructions" customModule="Blubble" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cn4-k8-iDk"/>
                         <viewControllerLayoutGuide type="bottom" id="dWD-Bx-rca"/>
@@ -150,14 +156,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" minimumFontSize="5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zxz-CM-0pP">
-                                <rect key="frame" x="18.5" y="64" width="337.5" height="267"/>
+                                <rect key="frame" x="19" y="64" width="337.5" height="267"/>
                                 <string key="text">Instructions mode 1 joueur: Appuyer alternativement sur le bouton gauche et le bouton droit pour faire grossir la bulle !!!      Instructions mode 2 joueurs: Appuyer alternativement sur la partie gauche et la partie droite de votre moitié d'écran. Celui qui crève la bulle de l'autre gagne le match ! </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="79"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uf1-7l-OWG">
-                                <rect key="frame" x="150.5" y="453" width="75" height="75"/>
+                                <rect key="frame" x="150" y="453" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uf1-7l-OWG" secondAttribute="height" multiplier="1:1" id="a4Q-hA-p7r"/>
                                 </constraints>
@@ -182,8 +188,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="instructionsLabel" destination="zxz-CM-0pP" id="I2w-lP-Gw6"/>
-                        <outlet property="retourButton" destination="uf1-7l-OWG" id="oeK-xu-dHz"/>
+                        <outlet property="buttonRetour" destination="uf1-7l-OWG" id="oeK-xu-dHz"/>
+                        <outlet property="labelInstructions" destination="zxz-CM-0pP" id="I2w-lP-Gw6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkM-yT-n2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -193,7 +199,7 @@
         <!--View Controller Play Ground2 Players-->
         <scene sceneID="L5j-fr-C3N">
             <objects>
-                <viewController id="gf9-3J-15h" customClass="ViewControllerPlayGround2Players" customModule="Blubble" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gf9-3J-15h" customClass="BBViewControllerPlayGround2Players" customModule="Blubble" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lfl-ON-qcA"/>
                         <viewControllerLayoutGuide type="bottom" id="8zN-zT-YtX"/>
@@ -203,7 +209,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcZ-mZ-PzO">
-                                <rect key="frame" x="0.0" y="333" width="188" height="334"/>
+                                <rect key="frame" x="0.0" y="333.5" width="187.5" height="333.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                 <connections>
@@ -212,7 +218,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nM9-U4-XD7">
-                                <rect key="frame" x="187" y="333" width="188" height="334"/>
+                                <rect key="frame" x="187.5" y="333.5" width="187.5" height="333.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                 <connections>
@@ -221,7 +227,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySl-0F-1wD">
-                                <rect key="frame" x="0.0" y="0.0" width="188" height="334"/>
+                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="333.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                 <connections>
@@ -230,7 +236,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIa-CE-qPe">
-                                <rect key="frame" x="187" y="0.0" width="188" height="334"/>
+                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="333.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                 <connections>
@@ -281,18 +287,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXp-H5-7Lj">
-                                <rect key="frame" x="39" y="342" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6ew-Q2-4oa">
-                                <rect key="frame" x="0.0" y="274" width="26" height="120"/>
+                                <rect key="frame" x="0.0" y="283.5" width="26.5" height="120"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezV-bG-1wx">
-                                        <rect key="frame" x="0.0" y="0.0" width="26" height="26.5"/>
+                                        <rect key="frame" x="0.5" y="0.0" width="26" height="26.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ezV-bG-1wx" secondAttribute="height" multiplier="1:1" id="VI3-KQ-ysc"/>
                                         </constraints>
@@ -306,18 +305,18 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5L-aL-ET5">
-                                        <rect key="frame" x="0.0" y="46.5" width="26" height="27"/>
+                                        <rect key="frame" x="0.0" y="46.5" width="26.5" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="B5L-aL-ET5" secondAttribute="height" multiplier="1:1" id="r23-ZX-Ofo"/>
                                         </constraints>
                                         <state key="normal" image="Command-Reset"/>
                                         <connections>
-                                            <action selector="replayButtonPressed:" destination="9aD-iR-vhW" eventType="touchUpInside" id="SLG-GO-TsM"/>
-                                            <action selector="replayButtonPressed:" destination="gf9-3J-15h" eventType="touchUpInside" id="dAE-4w-TIS"/>
+                                            <action selector="buttonReplayPressed:" destination="9aD-iR-vhW" eventType="touchUpInside" id="SLG-GO-TsM"/>
+                                            <action selector="buttonReplayPressed:" destination="gf9-3J-15h" eventType="touchUpInside" id="dAE-4w-TIS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CP0-Em-oiU">
-                                        <rect key="frame" x="0.0" y="93.5" width="26" height="26.5"/>
+                                        <rect key="frame" x="0.5" y="93.5" width="26" height="26.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="CP0-Em-oiU" secondAttribute="height" multiplier="1:1" id="EVc-nk-v07"/>
@@ -328,13 +327,13 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RWu-g3-e2V">
-                                <rect key="frame" x="292" y="334" width="83" height="66.5"/>
+                                <rect key="frame" x="291.5" y="333.5" width="83.5" height="66.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P9n-9B-geT" userLabel="View1">
-                                        <rect key="frame" x="0.5" y="0.0" width="33.5" height="33.5"/>
+                                        <rect key="frame" x="0.5" y="0.0" width="34" height="34"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sumIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Sbs-sc-8Er">
-                                                <rect key="frame" x="6.5" y="7" width="20" height="20"/>
+                                                <rect key="frame" x="7" y="7" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Sbs-sc-8Er" secondAttribute="height" multiplier="1:1" id="5oT-Ep-muI"/>
                                                 </constraints>
@@ -350,7 +349,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMO-b1-rde" userLabel="View2">
-                                        <rect key="frame" x="34.5" y="0.0" width="49" height="33.5"/>
+                                        <rect key="frame" x="35" y="0.0" width="49" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nBV-wa-vjp">
                                                 <rect key="frame" x="4.5" y="4" width="39.5" height="26.5"/>
@@ -371,10 +370,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5pG-wp-lkq" userLabel="View3">
-                                        <rect key="frame" x="0.5" y="33.5" width="33.5" height="33"/>
+                                        <rect key="frame" x="0.5" y="34" width="33" height="32.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="victoryIcon" translatesAutoresizingMaskIntoConstraints="NO" id="E0M-RI-wk8">
-                                                <rect key="frame" x="7" y="6.5" width="20" height="20"/>
+                                                <rect key="frame" x="7" y="6" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="E0M-RI-wk8" secondAttribute="height" multiplier="1:1" id="gXr-aW-zba"/>
                                                 </constraints>
@@ -390,10 +389,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6i-Yz-tqK" userLabel="View4">
-                                        <rect key="frame" x="33.5" y="33.5" width="50" height="33"/>
+                                        <rect key="frame" x="35.5" y="34" width="48.5" height="32.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="itt-RM-ELS">
-                                                <rect key="frame" x="5" y="2.5" width="40" height="27"/>
+                                                <rect key="frame" x="5" y="3" width="39" height="26"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="itt-RM-ELS" secondAttribute="height" multiplier="3:2" id="Nbt-SM-hqF"/>
                                                 </constraints>
@@ -429,13 +428,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6CZ-PP-lXh" userLabel="Game Board View2">
-                                <rect key="frame" x="292" y="267" width="83" height="66.5"/>
+                                <rect key="frame" x="291.5" y="267" width="83.5" height="66.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56C-vH-L7w" userLabel="View1">
-                                        <rect key="frame" x="0.5" y="0.0" width="34" height="34"/>
+                                        <rect key="frame" x="0.5" y="0.0" width="33.5" height="33"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sumIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4bQ-WI-UgO">
-                                                <rect key="frame" x="7.5" y="6" width="20.5" height="20.5"/>
+                                                <rect key="frame" x="7" y="6" width="19.5" height="19.5"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -448,10 +447,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="376-ld-4xJ" userLabel="View2">
-                                        <rect key="frame" x="34" y="0.0" width="49.5" height="34"/>
+                                        <rect key="frame" x="34" y="0.0" width="50" height="33"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AmW-kQ-lYc">
-                                                <rect key="frame" x="4.5" y="3.5" width="40" height="26.5"/>
+                                                <rect key="frame" x="5" y="2.5" width="40" height="27"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="AmW-kQ-lYc" secondAttribute="height" multiplier="3:2" id="AGu-nr-cJX"/>
                                                 </constraints>
@@ -469,10 +468,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYO-Rr-iyQ" userLabel="View3">
-                                        <rect key="frame" x="0.5" y="34" width="32.5" height="32.5"/>
+                                        <rect key="frame" x="0.5" y="33" width="34" height="33.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="victoryIcon" translatesAutoresizingMaskIntoConstraints="NO" id="WnC-xu-wdk">
-                                                <rect key="frame" x="6.5" y="6" width="19.5" height="19.5"/>
+                                                <rect key="frame" x="7" y="6.5" width="20.5" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="WnC-xu-wdk" secondAttribute="height" multiplier="1:1" id="0DJ-rZ-pHI"/>
                                                 </constraints>
@@ -488,10 +487,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afm-1r-6pY" userLabel="View4">
-                                        <rect key="frame" x="35.5" y="34" width="48" height="32.5"/>
+                                        <rect key="frame" x="34.5" y="33" width="49.5" height="33.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4bp-NU-r0v">
-                                                <rect key="frame" x="4.5" y="3" width="38.5" height="26"/>
+                                                <rect key="frame" x="4.5" y="3.5" width="40" height="27"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="4bp-NU-r0v" secondAttribute="height" multiplier="3:2" id="GUw-M5-1FF"/>
                                                 </constraints>
@@ -565,26 +564,23 @@
                     <connections>
                         <outlet property="buttonLeft1" destination="hcZ-mZ-PzO" id="VYb-GX-p6X"/>
                         <outlet property="buttonLeft2" destination="ySl-0F-1wD" id="4F8-tU-Xyg"/>
+                        <outlet property="buttonReplay" destination="B5L-aL-ET5" id="obR-7E-Iil"/>
+                        <outlet property="buttonRetour" destination="ezV-bG-1wx" id="RCu-TE-8Hh"/>
                         <outlet property="buttonRight1" destination="nM9-U4-XD7" id="aBN-yJ-NvU"/>
                         <outlet property="buttonRight2" destination="SIa-CE-qPe" id="rMN-Ee-2KG"/>
-                        <outlet property="gameBoardView1" destination="RWu-g3-e2V" id="BKM-Le-ZrM"/>
-                        <outlet property="gameBoardView2" destination="6CZ-PP-lXh" id="znc-ua-WHo"/>
                         <outlet property="imagePointe" destination="qyA-8f-rTy" id="IKZ-te-uWu"/>
                         <outlet property="imageView1" destination="s9i-s1-MQN" id="iJi-Ok-1Um"/>
                         <outlet property="imageView2" destination="udy-yu-b5W" id="9CA-yi-9NO"/>
+                        <outlet property="labelScoreToWin1" destination="itt-RM-ELS" id="chu-zE-3UJ"/>
+                        <outlet property="labelScoreToWin2" destination="4bp-NU-r0v" id="VUK-tg-4Zg"/>
                         <outlet property="line1" destination="dn3-Kf-Buo" id="MXM-sN-KHc"/>
                         <outlet property="line2" destination="qhF-7s-sHa" id="L5y-rQ-TLC"/>
                         <outlet property="line3" destination="ywm-Gf-jJ4" id="5Gx-5z-PXr"/>
-                        <outlet property="player1Name" destination="hXp-H5-7Lj" id="2N0-22-0Km"/>
-                        <outlet property="pourGagnerLabel1" destination="itt-RM-ELS" id="zOZ-xB-V8x"/>
-                        <outlet property="replayButton" destination="B5L-aL-ET5" id="obR-7E-Iil"/>
-                        <outlet property="retourButton" destination="ezV-bG-1wx" id="RCu-TE-8Hh"/>
-                        <outlet property="score1ToWin" destination="itt-RM-ELS" id="chu-zE-3UJ"/>
-                        <outlet property="score2ToWin" destination="4bp-NU-r0v" id="VUK-tg-4Zg"/>
                         <outlet property="scoreLabel1" destination="nBV-wa-vjp" id="ixh-Es-WoR"/>
                         <outlet property="scoreLabel2" destination="AmW-kQ-lYc" id="fdT-Ht-b8Q"/>
                         <outlet property="stackView" destination="6ew-Q2-4oa" id="aDA-B6-sc1"/>
-                        <outlet property="totalLabel1" destination="nBV-wa-vjp" id="qhm-j6-4rA"/>
+                        <outlet property="viewScoreBoard1" destination="RWu-g3-e2V" id="BKM-Le-ZrM"/>
+                        <outlet property="viewScoreBoard2" destination="6CZ-PP-lXh" id="znc-ua-WHo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jbg-id-Ccu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -594,7 +590,7 @@
         <!--View Controller Enter2 Players Mode-->
         <scene sceneID="dPE-PB-oeh">
             <objects>
-                <viewController id="t1S-fK-ENd" customClass="ViewControllerEnter2PlayersMode" customModule="Blubble" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="t1S-fK-ENd" customClass="BBViewControllerEnter2PlayersMode" customModule="Blubble" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="psB-UB-MQG"/>
                         <viewControllerLayoutGuide type="bottom" id="PFE-IR-cIt"/>
@@ -604,7 +600,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3n-vb-Ers">
-                                <rect key="frame" x="57" y="113" width="262.5" height="441"/>
+                                <rect key="frame" x="56.5" y="113" width="262.5" height="441"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choississez maintenant par combien de coups il faudra distancer son adversaire pour remporter le match:" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="p8E-ze-2RU">
                                         <rect key="frame" x="0.0" y="2" width="262.5" height="81.5"/>
@@ -623,7 +619,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObX-AU-1RO" userLabel="Label1">
-                                        <rect key="frame" x="118" y="112.5" width="26.5" height="56.5"/>
+                                        <rect key="frame" x="118" y="112.5" width="26" height="56.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ObX-AU-1RO" secondAttribute="height" multiplier="21:46" id="Rjp-V5-U05"/>
                                         </constraints>
@@ -632,13 +628,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUY-gh-7Tc">
-                                        <rect key="frame" x="39" y="158.5" width="184" height="184"/>
+                                        <rect key="frame" x="38.5" y="158.5" width="184.5" height="184"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="KUY-gh-7Tc" secondAttribute="height" multiplier="1:1" id="7sl-hv-f5M"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="icon-video-overlay-play"/>
                                         <connections>
-                                            <action selector="playButtonPressed:" destination="t1S-fK-ENd" eventType="touchUpInside" id="u7J-wv-5hy"/>
+                                            <action selector="buttonPlayPressed:" destination="t1S-fK-ENd" eventType="touchUpInside" id="u7J-wv-5hy"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZ3-lN-IVU" userLabel="Label2">
@@ -693,9 +689,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="nombreDeCoupsTextField" destination="2cK-4y-64p" id="jQt-Aj-ah3"/>
-                        <outlet property="playButton" destination="KUY-gh-7Tc" id="Aew-Mw-NDL"/>
-                        <outlet property="retourButton" destination="kgP-lc-8Hx" id="Xp8-Fp-oKs"/>
+                        <outlet property="buttonPlay" destination="KUY-gh-7Tc" id="Aew-Mw-NDL"/>
+                        <outlet property="buttonRetour" destination="kgP-lc-8Hx" id="Xp8-Fp-oKs"/>
+                        <outlet property="textFieldNombreDeCoupsDeDiffPourGagner" destination="2cK-4y-64p" id="jQt-Aj-ah3"/>
                         <segue destination="gf9-3J-15h" kind="show" identifier="play2PlayersMode" id="F5x-Dv-HKp"/>
                     </connections>
                 </viewController>
@@ -706,7 +702,7 @@
         <!--View Controller Play Ground-->
         <scene sceneID="PEP-zc-4OM">
             <objects>
-                <viewController id="9aD-iR-vhW" customClass="ViewControllerPlayGround" customModule="Blubble" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9aD-iR-vhW" customClass="BBViewControllerPlayGround" customModule="Blubble" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xaA-eS-o3M"/>
                         <viewControllerLayoutGuide type="bottom" id="ehq-fk-LLf"/>
@@ -740,8 +736,8 @@
                                     <action selector="buttonRightPressed:" destination="9aD-iR-vhW" eventType="touchUpInside" id="DmW-K4-09i"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRs-rF-nui">
-                                <rect key="frame" x="82.5" y="28" width="210" height="106.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRs-rF-nui">
+                                <rect key="frame" x="188" y="28" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="89"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -753,7 +749,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rta-ig-iwt">
-                                <rect key="frame" x="152" y="534" width="71" height="21"/>
+                                <rect key="frame" x="153" y="534" width="69.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -766,7 +762,7 @@
                                 </constraints>
                                 <state key="normal" image="Command-Reset"/>
                                 <connections>
-                                    <action selector="replayButtonPressed:" destination="9aD-iR-vhW" eventType="touchUpInside" id="RPF-x1-R52"/>
+                                    <action selector="buttonReplayPressed:" destination="9aD-iR-vhW" eventType="touchUpInside" id="RPF-x1-R52"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzl-Jo-uKD">
@@ -794,7 +790,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="showLeaderButtonPressed:" destination="9aD-iR-vhW" eventType="touchUpInside" id="t9l-uU-cXL"/>
+                                    <action selector="buttonGameCenterPressed:" destination="9aD-iR-vhW" eventType="touchUpInside" id="t9l-uU-cXL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -829,13 +825,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonGameCenter" destination="CEa-3o-iBA" id="nih-bL-ksv"/>
                         <outlet property="buttonLeft" destination="rwM-Pc-Egy" id="xIz-Xq-qlH"/>
+                        <outlet property="buttonReplay" destination="TIg-io-LWe" id="cfG-hx-TSo"/>
                         <outlet property="buttonRight" destination="Xza-NR-sSe" id="MZl-Hc-dSQ"/>
-                        <outlet property="countDownLabel" destination="iRs-rF-nui" id="Qhr-U2-4tl"/>
                         <outlet property="imageView" destination="BRR-IV-et9" id="0WB-CC-phU"/>
-                        <outlet property="replayButton" destination="TIg-io-LWe" id="cfG-hx-TSo"/>
-                        <outlet property="scoreLabel" destination="EIx-9P-1Py" id="sVV-UC-Jdr"/>
-                        <outlet property="showLeaderButton" destination="CEa-3o-iBA" id="nih-bL-ksv"/>
+                        <outlet property="labelCountDown" destination="iRs-rF-nui" id="Qhr-U2-4tl"/>
+                        <outlet property="labelScore" destination="EIx-9P-1Py" id="sVV-UC-Jdr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWO-sE-gZV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -858,7 +854,7 @@
         <image name="victoryIcon" width="390" height="390"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wTc-yT-zDP"/>
         <segue reference="krR-4p-iOh"/>
+        <segue reference="YR1-5h-eQ1"/>
     </inferredMetricsTieBreakers>
 </document>

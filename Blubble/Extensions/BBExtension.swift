@@ -1,5 +1,5 @@
 //
-//  Extension.swift
+//  BBExtension.swift
 //  Blubble
 //
 //  Created by Maxime DeSaint on 5/5/17.
